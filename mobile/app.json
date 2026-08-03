@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "Agri-Link Rwanda",
+    "slug": "agrilink-rwanda",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "scheme": "agrilink",
+    "splash": {
+      "backgroundColor": "#16a34a"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "rw.agrilink.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#16a34a"
+      },
+      "package": "rw.agrilink.app",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "agrilink"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "plugins": [
+      "expo-web-browser",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow AgriLink to access your photos to add crop images.",
+          "cameraPermission": "Allow AgriLink to access your camera to take crop photos."
+        }
+      ]
+    ]
+  }
+}
