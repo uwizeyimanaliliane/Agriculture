@@ -150,8 +150,14 @@ exports.googleAuth = async (req, res, next) => {
       if (!user.googleId) {
         user.googleId = googleUser.googleId;
         user.avatar = googleUser.avatar;
-        await user.save();
       }
+      if (role && !user.role) {
+        user.role = role;
+      }
+      if (role && role !== user.role && ['buyer', 'farmer'].includes(role)) {
+        user.role = role;
+      }
+      await user.save();
     } else {
       user = await User.create({
         email: googleUser.email,

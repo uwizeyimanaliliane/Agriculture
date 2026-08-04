@@ -4,6 +4,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import * as Google from 'expo-auth-session/providers/google';
 import * as WebBrowser from 'expo-web-browser';
 import { makeRedirectUri } from 'expo-auth-session';
+import Constants from 'expo-constants';
 import { tw } from '../../utils/tw';
 import { useAuth } from '../../context/AuthContext';
 import { useTheme } from '../../context/ThemeContext';
@@ -12,11 +13,17 @@ import { useI18n } from '../../i18n';
 WebBrowser.maybeCompleteAuthSession();
 
 const DEFAULT_CLIENT_ID = '827251390032-lf1eq7qbb8jhio2s00b6nif03rkgu8qh.apps.googleusercontent.com';
-const WEB_CLIENT_ID = process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID || DEFAULT_CLIENT_ID;
-const ANDROID_CLIENT_ID = process.env.EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID || WEB_CLIENT_ID;
-const IOS_CLIENT_ID = process.env.EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID || WEB_CLIENT_ID;
+const {
+  EXPO_PUBLIC_GOOGLE_CLIENT_ID,
+  EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID,
+  EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID,
+} = Constants.expoConfig?.extra || {};
 
-const hasGoogleConfig = !!WEB_CLIENT_ID;
+const WEB_CLIENT_ID = EXPO_PUBLIC_GOOGLE_CLIENT_ID || DEFAULT_CLIENT_ID;
+const ANDROID_CLIENT_ID = EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID || WEB_CLIENT_ID;
+const IOS_CLIENT_ID = EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID || WEB_CLIENT_ID;
+
+const hasGoogleConfig = !!EXPO_PUBLIC_GOOGLE_CLIENT_ID;
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
@@ -34,6 +41,8 @@ const LoginScreen = ({ navigation }) => {
     { code: 'fr', label: 'Français' },
     { code: 'rw', label: 'Kinyarwanda' },
   ];
+
+  const [selectedRole, setSelectedRole] = useState('buyer');
 
   useEffect(() => {
     return () => { mountedRef.current = false; };
@@ -57,26 +66,30 @@ const LoginScreen = ({ navigation }) => {
     redirectUri,
   }, { useProxy });
 
-  useEffect(() => {
-    if (response?.type === 'success') {
-      const { id_token } = response.params || {};
-      if (!id_token) {
-        if (mountedRef.current) setGoogleLoading(false);
-        return;
-      }
-      setGoogleLoading(true);
-      googleLogin(id_token)
-        .catch((error) => {
-          const msg = error.response?.data?.message || error.message || 'Please try again.';
-          if (mountedRef.current) Alert.alert('Google Sign-In Failed', msg);
-        })
-        .finally(() => {
-          if (mountedRef.current) setGoogleLoading(false);
-        });
-    } else if (response?.type === 'error') {
-      if (mountedRef.current) {
-        setGoogleLoading(false);
-        const err = response.error || {};
+  const handleGooglePress = async () => {
+    if (!hasGoogleConfig) return;
+    if (!selectedRole) {
+      Alert.alert('Role Required', 'Please choose Farmer or Buyer before continuing with Google sign-in.');
+      return;
+    }
+    if (!request) {
+      Alert.alert('Not Ready', 'Google Sign-In is initializing. Please try again.');
+      return;
+    }
+    setGoogleLoading(true);
+    try {
+      const result = await promptAsync({ useProxy });
+      if (result.type === 'success') {
+        const idToken = result.authentication?.idToken || result.params?.id_token;
+        if (!idToken) {
+          Alert.alert('Google Sign-In Failed', 'No id token received from Google. Please try again.');
+          return;
+        }
+        await googleLogin(idToken, selectedRole);
+        // No manual navigation needed: AuthContext's isAuthenticated change
+        // makes AppNavigator render the role's home automatically.
+      } else if (result.type === 'error') {
+        const err = result.error || {};
         const errMsg = err.message || err.description || err.code || '';
         const isSetupIssue = /redirect_uri_mismatch|origin_mismatch|access_denied/i.test(JSON.stringify(err));
         if (isSetupIssue) {
@@ -98,23 +111,12 @@ const LoginScreen = ({ navigation }) => {
           Alert.alert('Google Sign-In Failed', errMsg || 'Unable to complete authentication.');
         }
       }
-    }
-  }, [response]);
-
-  const handleGooglePress = async () => {
-    if (!hasGoogleConfig) return;
-    if (!request) {
-      Alert.alert('Not Ready', 'Google Sign-In is initializing. Please try again.');
-      return;
-    }
-    setGoogleLoading(true);
-    try {
-      await promptAsync({ useProxy });
     } catch (error) {
       if (mountedRef.current) {
-        setGoogleLoading(false);
         Alert.alert('Google Sign-In Failed', error.message || 'Please try again.');
       }
+    } finally {
+      if (mountedRef.current) setGoogleLoading(false);
     }
   };
 
@@ -223,6 +225,21 @@ const LoginScreen = ({ navigation }) => {
           <View style={tw(`flex-1 h-px ${isDarkMode ? 'bg-slate-600' : 'bg-gray-300'}`)} />
           <Text style={tw(`mx-3 text-sm ${isDarkMode ? 'text-slate-400' : 'text-gray-500'}`)}>{t('auth.or')}</Text>
           <View style={tw(`flex-1 h-px ${isDarkMode ? 'bg-slate-600' : 'bg-gray-300'}`)} />
+        </View>
+
+        <Text style={tw(`text-sm font-semibold mb-3 ${isDarkMode ? 'text-white' : 'text-gray-700'}`)}>{t('auth.iAmA')}</Text>
+        <View style={tw('flex-row gap-2 mb-4')}>
+          {['farmer', 'buyer'].map((role) => (
+            <TouchableOpacity
+              key={role}
+              style={tw(`flex-1 py-3 rounded-xl border ${selectedRole === role ? 'border-green-800 bg-green-800' : isDarkMode ? 'border-slate-600 bg-slate-700' : 'border-gray-300 bg-white'}`)}
+              onPress={() => setSelectedRole(role)}
+            >
+              <Text style={tw(`text-center font-semibold ${selectedRole === role ? 'text-white' : isDarkMode ? 'text-slate-300' : 'text-gray-800'}`)}>
+                {t(`auth.${role}`)}
+              </Text>
+            </TouchableOpacity>
+          ))}
         </View>
 
         <TouchableOpacity
