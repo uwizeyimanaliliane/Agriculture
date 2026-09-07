@@ -5,6 +5,8 @@ import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { tw } from '../../utils/tw';
 import { useTheme } from '../../context/ThemeContext';
 import { useAuth } from '../../context/AuthContext';
+import { useNotifications } from '../../context/NotificationContext';
+import { BellIcon } from '../../components/Icons';
 import { useI18n } from '../../i18n';
 import { deliveryAPI } from '../../services/api';
 import { formatCurrency } from '../../utils/formatters';
@@ -23,6 +25,7 @@ const TransporterJobs = () => {
   const { isDarkMode } = useTheme();
   const { user } = useAuth();
   const { t } = useI18n();
+  const { unreadCount } = useNotifications();
   const navigation = useNavigation();
 
   const loadDeliveries = async () => {
@@ -193,6 +196,18 @@ const TransporterJobs = () => {
             <Text style={tw('text-green-200 text-sm mt-1')}>Available transport jobs</Text>
           </View>
           <View style={tw('flex-row items-center')}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('Notifications')}
+              style={tw('w-10 h-10 rounded-full items-center justify-center bg-white/20 mr-2 relative')}
+              activeOpacity={0.9}
+            >
+              <BellIcon size={22} color="#ffffff" />
+              {unreadCount > 0 && (
+                <View style={tw('absolute top-0 right-0 min-w-[18px] h-[18px] rounded-full bg-red-500 items-center justify-center px-1 z-10')}>
+                  <Text style={tw('text-[9px] text-white font-bold')}>{unreadCount > 9 ? '9+' : unreadCount}</Text>
+                </View>
+              )}
+            </TouchableOpacity>
             <TouchableOpacity style={tw('bg-white/20 p-2 rounded-lg mr-2')} onPress={() => navigation.navigate('TransporterMap')}>
               <Text style={tw('text-white text-xs')}>Full Map</Text>
             </TouchableOpacity>

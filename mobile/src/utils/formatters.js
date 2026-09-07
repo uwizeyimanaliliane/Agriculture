@@ -1,24 +1,19 @@
 import { Platform } from 'react-native';
 
+const getServerUrl = () => {
+  if (process.env.EXPO_PUBLIC_API_URL) {
+    return process.env.EXPO_PUBLIC_API_URL.replace(/\/api\/?$/, '');
+  }
+  throw new Error('EXPO_PUBLIC_API_URL is not configured. Add it to mobile/.env.');
+};
+
 export const getImageUrl = (path) => {
   if (!path) return null;
   if (path.startsWith('http://') || path.startsWith('https://')) return path;
   if (path.startsWith('file://') || path.startsWith('data:')) return path;
 
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
-
-  if (Platform.OS === 'web') {
-    const protocol = window.location.protocol || 'http:';
-    const hostname = window.location.hostname || 'localhost';
-    const port = 5000;
-    return `${protocol}//${hostname}:${port}${normalizedPath}`;
-  }
-
-  if (Platform.OS === 'ios') {
-    return `http://127.0.0.1:5000${normalizedPath}`;
-  }
-
-  return `http://10.0.2.2:5000${normalizedPath}`;
+  return `${getServerUrl()}${normalizedPath}`;
 };
 
 export const formatCurrency = (amount) => {

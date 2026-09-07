@@ -7,6 +7,7 @@ const AuthContext = createContext(null);
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
+  const [agreementAccepted, setAgreementAccepted] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -15,14 +16,14 @@ export const AuthProvider = ({ children }) => {
 
   const loadStoredAuth = async () => {
     try {
-      const storedToken = await AsyncStorage.getItem('token');
-      const storedUser = await AsyncStorage.getItem('user');
-      if (storedToken && storedUser) {
-        setToken(storedToken);
-        setUser(JSON.parse(storedUser));
-      }
+      // Force login page on every launch: never auto-restore a saved session.
+      await AsyncStorage.removeItem('token');
+      await AsyncStorage.removeItem('user');
+
+      const storedAgreement = await AsyncStorage.getItem('farmerAgreementAccepted');
+      setAgreementAccepted(storedAgreement === 'true');
     } catch (error) {
-      console.error('Failed to load auth:', error);
+      console.error('Failed to clear auth on launch:', error);
     } finally {
       setLoading(false);
     }
@@ -33,6 +34,15 @@ export const AuthProvider = ({ children }) => {
     await AsyncStorage.setItem('user', JSON.stringify(newUser));
     setToken(newToken);
     setUser(newUser);
+  };
+
+  const acceptFarmerAgreement = async () => {
+    try {
+      await AsyncStorage.setItem('farmerAgreementAccepted', 'true');
+      setAgreementAccepted(true);
+    } catch (error) {
+      console.error('Failed to save farmer agreement:', error);
+    }
   };
 
   const register = async (data) => {
@@ -59,9 +69,11 @@ export const AuthProvider = ({ children }) => {
     try {
       await AsyncStorage.removeItem('token');
       await AsyncStorage.removeItem('user');
+      await AsyncStorage.removeItem('farmerAgreementAccepted');
     } catch (_) {}
     setToken(null);
     setUser(null);
+    setAgreementAccepted(false);
   };
 
   const updateUser = async (data) => {
@@ -107,12 +119,14 @@ export const AuthProvider = ({ children }) => {
       value={{
         user,
         token,
+        agreementAccepted,
         loading,
         register,
         login,
         googleLogin,
         logout,
         updateUser,
+        acceptFarmerAgreement,
         setAuth,
         isAuthenticated: !!token,
       }}

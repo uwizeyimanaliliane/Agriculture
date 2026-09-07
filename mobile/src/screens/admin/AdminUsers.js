@@ -4,25 +4,30 @@ import { tw } from '../../utils/tw';
 import { useTheme } from '../../context/ThemeContext';
 import { adminAPI } from '../../services/api';
 import { alert, confirmAlert } from '../../utils/platform';
-import ContactButtons from '../../components/ContactButtons';
+import BackButton from '../../components/BackButton';
 
 const ROLE_COLORS = {
   farmer: 'bg-green-100 text-green-800',
   buyer: 'bg-blue-100 text-blue-700',
-  transporter: 'bg-orange-100 text-orange-700',
   admin: 'bg-purple-100 text-purple-700',
 };
 
-const AdminUsers = ({ navigation }) => {
+const AdminUsers = ({ navigation, route }) => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
-  const [filter, setFilter] = useState('');
+  const [filter, setFilter] = useState(route?.params?.role || '');
   const { isDarkMode } = useTheme();
 
   useEffect(() => {
     fetchUsers();
   }, [filter]);
+
+  useEffect(() => {
+    if (route?.params && Object.prototype.hasOwnProperty.call(route.params, 'role')) {
+      setFilter(route.params.role);
+    }
+  }, [route?.params?.role]);
 
   const fetchUsers = async () => {
     setLoading(true);
@@ -71,15 +76,6 @@ const AdminUsers = ({ navigation }) => {
           {item.phone && (
             <Text style={tw(`text-xs ${isDarkMode ? 'text-slate-400' : 'text-gray-500'}`)}>{item.phone}</Text>
           )}
-          {item.role === 'transporter' && item.phone && (
-            <ContactButtons
-              phone={item.phone}
-              name={item.name}
-              smsBody={`Agri-Link transport coordination`}
-              compact
-              isDarkMode={isDarkMode}
-            />
-          )}
           <View style={tw('flex-row items-center mt-1')}>
             <View style={tw(`px-2 py-0.5 rounded-full ${ROLE_COLORS[item.role] || 'bg-gray-100'} ${isDarkMode ? '' : ''}`)}>
               <Text style={tw(`text-xs font-medium`)}>{item.role}</Text>
@@ -112,6 +108,7 @@ const AdminUsers = ({ navigation }) => {
   return (
     <View style={tw(`flex-1 ${isDarkMode ? 'bg-slate-900' : 'bg-white'}`)}>
       <View style={tw(`p-5 pt-12 ${isDarkMode ? 'bg-slate-800' : 'bg-green-800'}`)}>
+        <BackButton onPress={() => navigation.goBack()} style="mb-3" />
         <Text style={tw('text-white text-xl font-bold')}>Manage Users</Text>
       </View>
 
@@ -126,10 +123,10 @@ const AdminUsers = ({ navigation }) => {
       </View>
 
       <View style={tw('flex-row px-4 py-3 gap-2')}>
-        {['', 'farmer', 'buyer', 'transporter', 'admin'].map((role) => (
+        {['', 'farmer', 'buyer', 'admin'].map((role) => (
           <TouchableOpacity key={role}
             style={tw(`px-3 py-1.5 rounded-full ${filter === role ? 'bg-green-800' : isDarkMode ? 'bg-slate-700' : 'bg-green-100'}`)}
-            onPress={() => setFilter(role === filter ? '' : role)}>
+            onPress={() => setFilter(role)}>
             <Text style={tw(`text-xs ${filter === role ? 'text-white' : isDarkMode ? 'text-slate-300' : 'text-green-800'}`)}>
               {role || 'All'}
             </Text>

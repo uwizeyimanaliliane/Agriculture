@@ -17,6 +17,7 @@ import { useTheme } from '../../context/ThemeContext';
 import { useI18n } from '../../i18n';
 import { cropAPI } from '../../services/api';
 import { formatCurrency, cropCategories, getImageUrl } from '../../utils/formatters';
+import BackButton from '../../components/BackButton';
 
 const BrowseCrops = ({ navigation }) => {
   const [crops, setCrops] = useState([]);
@@ -90,6 +91,7 @@ const BrowseCrops = ({ navigation }) => {
   return (
     <View style={tw(`flex-1 ${isDarkMode ? 'bg-slate-900' : 'bg-white'}`)}>
       <View style={tw(`p-6 pt-12 ${isDarkMode ? 'bg-slate-800' : 'bg-green-800'}`)}>
+        <BackButton onPress={() => navigation.getParent()?.navigate('Dashboard')} style="mb-3" />
         <Text style={tw('text-white text-2xl font-bold')}>{t('buyer.browse')}</Text>
         <TextInput
           style={tw('mt-3 bg-white/20 rounded-xl px-4 py-3 text-white placeholder-slate-300')}

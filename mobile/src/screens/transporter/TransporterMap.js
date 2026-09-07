@@ -156,6 +156,10 @@ const TransporterMap = ({ navigation }) => {
   return (
     <View style={tw('flex-1')}> 
       <View style={tw(`absolute top-0 left-0 right-0 z-10 p-4 ${isDarkMode ? 'bg-slate-950/80' : 'bg-white/90'}`)}>
+        <TouchableOpacity style={tw('self-start px-4 py-2 rounded-full bg-green-600 mb-2')}
+          onPress={() => navigation.goBack()}>
+          <Text style={tw('text-white font-medium')}>← Back</Text>
+        </TouchableOpacity>
         <Text style={tw(`text-base font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'}`)}>Transporter map</Text>
         <Text style={tw(`text-xs mt-1 ${isDarkMode ? 'text-slate-300' : 'text-gray-600'}`)}>
           Tap any pin to select the job and see routing. Orange is pickup, green is dropoff.

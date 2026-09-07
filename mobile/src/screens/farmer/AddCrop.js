@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert, ActivityIndicator, ScrollView, Image, Modal, Dimensions, Platform } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
+import { File as ExpoFile } from 'expo-file-system';
+import { useFocusEffect } from '@react-navigation/native';
 import { tw } from '../../utils/tw';
 import { useTheme } from '../../context/ThemeContext';
 import { useI18n } from '../../i18n';
 import { useAuth } from '../../context/AuthContext';
-import { cropAPI } from '../../services/api';
+import { farmerAPI, cropAPI, uploadMultipart } from '../../services/api';
 import { cropCategories, quantityUnits, getImageUrl } from '../../utils/formatters';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
@@ -34,18 +36,71 @@ const AddCrop = ({ navigation, route }) => {
 
   const markFailed = (url) => setFailedImages(prev => new Set([...prev, url]));
 
-  const { isDarkMode } = useTheme();
+    const { isDarkMode } = useTheme();
   const { t } = useI18n();
   const { user } = useAuth();
+  const [verification, setVerification] = useState(null);
+  const [verificationLoading, setVerificationLoading] = useState(true);
+  const [verificationError, setVerificationError] = useState(null);
+  const [inFlightCrop, setInFlightCrop] = useState(null);
+  const [inFlightCheckDone, setInFlightCheckDone] = useState(!isEditing);
+
+  const fetchInFlight = useCallback(async () => {
+    if (isEditing) return;
+    try {
+      const response = await cropAPI.getMine();
+      const inFlight = (response.data?.crops || []).find(c => c.status === 'pending_admin') || null;
+      setInFlightCrop(inFlight);
+    } catch (error) {
+      setInFlightCrop(null);
+    } finally {
+      setInFlightCheckDone(true);
+    }
+  }, [isEditing]);
+
+  const fetchVerificationStatus = useCallback(async () => {
+    setVerificationLoading(true);
+    setVerificationError(null);
+    try {
+      const response = await farmerAPI.getVerificationStatus();
+      setVerification(response.data.farmer);
+    } catch (error) {
+      setVerification(null);
+      setVerificationError(error.response?.data?.message || 'Unable to load verification status');
+    } finally {
+      setVerificationLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
     (async () => {
-      const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
-      if (status !== 'granted') {
-        Alert.alert('Permission needed', 'Camera roll permission is required to add photos');
+      const media = await ImagePicker.requestMediaLibraryPermissionsAsync();
+      if (!media.granted) {
+        Alert.alert('Permission needed', 'Photo permission is required to add photos');
       }
     })();
   }, []);
+
+  useFocusEffect(useCallback(() => {
+    fetchVerificationStatus();
+    fetchInFlight();
+  }, [fetchVerificationStatus, fetchInFlight]));
+
+  // Per-posting gate: before adding a NEW crop, the farmer must be verified by
+  // the admin. Payment of the post fee happens AFTER adding the product (the
+  // product is reviewed first, then posted once the admin approves it).
+  useEffect(() => {
+    if (isEditing) return;
+    if (verificationLoading) return;
+    if (verificationError) return;
+    if (!verification || verification.verificationStatus !== 'verified') {
+      Alert.alert(
+        'Verification Required',
+        'You must complete verification and be approved by an admin before adding a product.'
+      );
+      navigation.navigate('Verification');
+    }
+  }, [verificationLoading, verificationError, verification, isEditing, navigation]);
 
   const pickImage = async (replaceIndex) => {
     try {
@@ -54,7 +109,7 @@ const AddCrop = ({ navigation, route }) => {
         allowsMultipleSelection: replaceIndex === undefined,
         quality: 0.7,
       });
-      if (!result.canceled) {
+      if (!result.canceled && result.assets?.length > 0) {
         if (replaceIndex !== undefined) {
           setPhotos(prev => prev.map((p, i) => i === replaceIndex ? result.assets[0] : p));
         } else {
@@ -67,30 +122,6 @@ const AddCrop = ({ navigation, route }) => {
     }
   };
 
-  const takePhoto = async (replaceIndex) => {
-    try {
-      const { status } = await ImagePicker.requestCameraPermissionsAsync();
-      if (status !== 'granted') {
-        Alert.alert('Permission needed', 'Camera permission is required to take photos');
-        return;
-      }
-      const result = await ImagePicker.launchCameraAsync({
-        mediaTypes: ['images'],
-        quality: 0.7,
-      });
-      if (!result.canceled) {
-        if (replaceIndex !== undefined) {
-          setPhotos(prev => prev.map((p, i) => i === replaceIndex ? result.assets[0] : p));
-        } else {
-          setPhotos(prev => [...prev, ...result.assets]);
-          setPreviewImage(result.assets[0].uri);
-        }
-      }
-    } catch (error) {
-      Alert.alert('Camera Error', 'Could not open camera. Please try again or use gallery.');
-    }
-  };
-
   const tapPhoto = (photo, index) => {
     if (Platform.OS === 'web') {
       setPreviewImage(photo.uri);
@@ -100,7 +131,6 @@ const AddCrop = ({ navigation, route }) => {
         { text: 'Replace', onPress: () => {
           Alert.alert('Replace Photo', 'Choose source', [
             { text: 'Gallery', onPress: () => pickImage(index) },
-            { text: 'Camera', onPress: () => takePhoto(index) },
             { text: 'Cancel', style: 'cancel' },
           ]);
         }},
@@ -120,10 +150,6 @@ const AddCrop = ({ navigation, route }) => {
           Alert.alert('Replace Photo', 'Choose source', [
             { text: 'Gallery', onPress: async () => {
               await pickImage();
-              removeExistingPhoto(index);
-            }},
-            { text: 'Camera', onPress: async () => {
-              await takePhoto();
               removeExistingPhoto(index);
             }},
             { text: 'Cancel', style: 'cancel' },
@@ -174,7 +200,8 @@ const AddCrop = ({ navigation, route }) => {
           fd.append('photos', { uri, type, name: filename });
         }
       } else {
-        fd.append('photos', { uri, type, name: filename });
+        const file = new ExpoFile(uri);
+        fd.append('photos', file, filename);
       }
     }
 
@@ -190,21 +217,53 @@ const AddCrop = ({ navigation, route }) => {
       Alert.alert(t('auth.error'), t('auth.fillRequired'));
       return;
     }
+    if (!isEditing && photos.length === 0 && existingPhotos.length === 0) {
+      Alert.alert('Photo Required', 'Please add at least one photo of your crop before submitting.');
+      return;
+    }
+    if (!isEditing) {
+      if (verificationLoading) {
+        Alert.alert('Please wait', 'Checking your verification status before allowing crop posting.');
+        return;
+      }
+      if (verificationError) {
+        Alert.alert('Verification Error', 'Unable to confirm your verification status. Please retry from the verification screen.');
+        return;
+      }
+      if (!verification || verification.verificationStatus !== 'verified') {
+        Alert.alert(
+          'Verification Required',
+          'You must submit verification and be approved by admin before posting a product.'
+        );
+        return;
+      }
+      if (inFlightCrop) {
+        Alert.alert(
+          'Product Under Review',
+          `You already have "${inFlightCrop.name}" under review. Wait for the admin to approve or reject it before adding another product.`
+        );
+        navigation.navigate('CropPayment', { cropId: inFlightCrop._id, cropName: inFlightCrop.name });
+        return;
+      }
+    }
     setLoading(true);
     try {
       const formData = await buildFormData();
       if (isEditing) {
-        await cropAPI.update(existingCrop._id, formData);
+        await uploadMultipart(`/crops/${existingCrop._id}`, formData, 'PUT');
+        Alert.alert(t('auth.success'), 'Crop updated successfully');
+        navigation.goBack();
       } else {
-        await cropAPI.create(formData);
+        const res = await uploadMultipart('/crops', formData);
+        Alert.alert(t('auth.success'), 'Product submitted successfully. Next: pay the post fee so the admin can review it.');
+        const cropId = res.data?.crop?._id;
+        navigation.replace('CropPayment', { cropId, cropName: name });
       }
-      Alert.alert(t('auth.success'), isEditing ? 'Crop updated successfully' : 'Crop added successfully');
-      navigation.goBack();
     } catch (error) {
       const status = error.response?.status;
       const msg = error.response?.data?.message || 'Operation failed';
       if (status === 403) {
-        Alert.alert('Access Denied', 'Your account does not have farmer permissions. Please log in with a farmer account or contact support.');
+        Alert.alert('Access Denied', msg);
       } else {
         Alert.alert(t('auth.error'), msg);
       }
@@ -212,6 +271,104 @@ const AddCrop = ({ navigation, route }) => {
       setLoading(false);
     }
   };
+
+  const renderVerificationCallout = () => {
+    if (isEditing) return null;
+
+    if (verificationLoading) {
+      return (
+        <View style={tw(`p-5 rounded-2xl mb-5 ${isDarkMode ? 'bg-slate-800' : 'bg-white'}`)}>
+          <Text style={tw(`text-base ${isDarkMode ? 'text-slate-300' : 'text-gray-700'}`)}>Checking verification eligibility...</Text>
+        </View>
+      );
+    }
+
+    if (verificationError) {
+      return (
+        <View style={tw(`p-5 rounded-2xl mb-5 ${isDarkMode ? 'bg-slate-800' : 'bg-white'}`)}>
+          <Text style={tw(`text-base ${isDarkMode ? 'text-red-300' : 'text-red-700'}`)}>{verificationError}</Text>
+          <TouchableOpacity style={tw('mt-4 py-3 rounded-xl bg-green-800 items-center')}
+            onPress={fetchVerificationStatus}>
+            <Text style={tw('text-white font-semibold')}>Retry</Text>
+          </TouchableOpacity>
+        </View>
+      );
+    }
+
+    if (!verification || verification.verificationStatus !== 'verified') {
+      return (
+        <View style={tw(`p-5 rounded-2xl mb-5 ${isDarkMode ? 'bg-orange-800/10 border-orange-600/20' : 'bg-orange-50 border border-orange-200'}`)}>
+          <Text style={tw(`text-base font-semibold mb-2 ${isDarkMode ? 'text-orange-200' : 'text-orange-800'}`)}>Verification Required</Text>
+          <Text style={tw(`text-sm ${isDarkMode ? 'text-slate-300' : 'text-gray-700'}`)}>
+            You must submit verification and be approved by an admin before you can post a product.
+          </Text>
+          <TouchableOpacity style={tw('mt-4 py-3 rounded-xl bg-green-800 items-center')}
+            onPress={() => navigation.navigate('Verification')}>
+            <Text style={tw('text-white font-semibold')}>Go to Verification</Text>
+          </TouchableOpacity>
+        </View>
+      );
+    }
+
+    return null;
+  };
+
+  const canAddCrop = isEditing || (verification && verification.verificationStatus === 'verified');
+
+  if (!isEditing && (verificationLoading || !inFlightCheckDone)) {
+    return (
+      <View style={tw(`flex-1 justify-center items-center ${isDarkMode ? 'bg-slate-900' : 'bg-white'}`)}>
+        <ActivityIndicator size="large" color="#16a34a" />
+      </View>
+    );
+  }
+
+  if (!canAddCrop) {
+    return (
+      <View style={tw(`flex-1 justify-center items-center px-6 ${isDarkMode ? 'bg-slate-900' : 'bg-white'}`)}>
+        <View style={tw(`w-full p-6 rounded-2xl ${isDarkMode ? 'bg-slate-800' : 'bg-white shadow'}`)}>
+          <Text style={tw(`text-xl font-bold mb-2 text-center ${isDarkMode ? 'text-white' : 'text-gray-800'}`)}>
+            Verification Required
+          </Text>
+          <Text style={tw(`text-sm text-center mb-6 ${isDarkMode ? 'text-slate-400' : 'text-gray-600'}`)}>
+            You must complete the verification form and be approved by an admin before you can add a product.
+          </Text>
+          <TouchableOpacity style={tw('bg-green-800 py-3 rounded-xl items-center mb-3')}
+            onPress={() => navigation.navigate('Verification')}>
+            <Text style={tw('text-white font-semibold')}>Go to Verification</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={tw(`py-3 rounded-xl items-center ${isDarkMode ? 'bg-slate-700' : 'bg-gray-200'}`)}
+            onPress={() => navigation.goBack()}>
+            <Text style={tw(`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-700'}`)}>Back</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
+
+  if (!isEditing && inFlightCrop) {
+    return (
+      <View style={tw(`flex-1 justify-center items-center px-6 ${isDarkMode ? 'bg-slate-900' : 'bg-white'}`)}>
+        <View style={tw(`w-full p-6 rounded-2xl ${isDarkMode ? 'bg-slate-800' : 'bg-white shadow'}`)}>
+          <Text style={tw(`text-xl font-bold mb-2 text-center ${isDarkMode ? 'text-white' : 'text-gray-800'}`)}>
+            Product Under Review
+          </Text>
+          <Text style={tw(`text-sm text-center mb-6 ${isDarkMode ? 'text-slate-400' : 'text-gray-600'}`)}>
+            You already have "{inFlightCrop.name}" being reviewed by the admin. You can only add a new product
+            after this one is approved and posted to buyers, or rejected (then you can start again).
+          </Text>
+          <TouchableOpacity style={tw('bg-green-800 py-3 rounded-xl items-center mb-3')}
+            onPress={() => navigation.navigate('CropPayment', { cropId: inFlightCrop._id, cropName: inFlightCrop.name })}>
+            <Text style={tw('text-white font-semibold')}>View Current Product</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={tw(`py-3 rounded-xl items-center ${isDarkMode ? 'bg-slate-700' : 'bg-gray-200'}`)}
+            onPress={() => navigation.goBack()}>
+            <Text style={tw(`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-700'}`)}>Back</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
 
   return (
     <ScrollView style={tw(`flex-1 ${isDarkMode ? 'bg-slate-900' : 'bg-white'}`)}
@@ -227,6 +384,7 @@ const AddCrop = ({ navigation, route }) => {
         </Text>
       </View>
       <View style={tw('p-5')}>
+      {renderVerificationCallout()}
 
       <View style={tw(`p-5 rounded-2xl shadow-sm mb-5 ${isDarkMode ? 'bg-slate-800' : 'bg-white'}`)}>
         <Text style={tw(`text-sm font-medium mb-2 ${isDarkMode ? 'text-slate-300' : 'text-gray-600'}`)}>Photos</Text>
@@ -262,11 +420,6 @@ const AddCrop = ({ navigation, route }) => {
             onPress={() => pickImage()}>
             <Text style={tw(`text-2xl ${isDarkMode ? 'text-slate-400' : 'text-green-400'}`)}>+</Text>
             <Text style={tw(`text-xs ${isDarkMode ? 'text-slate-500' : 'text-green-500'}`)}>Gallery</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={tw(`w-20 h-20 rounded-xl border-2 border-dashed items-center justify-center ${isDarkMode ? 'border-slate-600' : 'border-green-300'}`)}
-            onPress={() => takePhoto()}>
-            <Text style={tw(`text-2xl ${isDarkMode ? 'text-slate-400' : 'text-green-400'}`)}>📷</Text>
-            <Text style={tw(`text-xs ${isDarkMode ? 'text-slate-500' : 'text-green-500'}`)}>Camera</Text>
           </TouchableOpacity>
         </View>
       </View>

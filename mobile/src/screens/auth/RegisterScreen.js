@@ -27,7 +27,6 @@ const RegisterScreen = ({ navigation }) => {
   const roles = [
     { value: 'farmer', labelKey: 'auth.farmer' },
     { value: 'buyer', labelKey: 'auth.buyer' },
-    { value: 'transporter', labelKey: 'auth.transporter' },
   ];
 
   const handleRegister = async () => {

@@ -3,8 +3,9 @@ import { View, Text, TextInput, TouchableOpacity, ActivityIndicator, FlatList } 
 import { tw } from '../../utils/tw';
 import { useTheme } from '../../context/ThemeContext';
 import { orderAPI } from '../../services/api';
+import BackButton from '../../components/BackButton';
 
-const Transporters = () => {
+const Transporters = ({ navigation }) => {
   const { isDarkMode } = useTheme();
   const [address, setAddress] = useState('');
   const [transporters, setTransporters] = useState([]);
@@ -58,6 +59,7 @@ const Transporters = () => {
   return (
     <View style={tw(`flex-1 ${isDarkMode ? 'bg-slate-900' : 'bg-white'}`)}>
       <View style={tw(`p-6 pt-12 ${isDarkMode ? 'bg-slate-800' : 'bg-green-800'}`)}>
+        <BackButton onPress={() => navigation.getParent()?.navigate('Dashboard')} style="mb-3" />
         <Text style={tw('text-white text-2xl font-bold')}>Available Transporters</Text>
         <Text style={tw('text-green-200 text-sm mt-1')}>Search transporters by address or name</Text>
       </View>

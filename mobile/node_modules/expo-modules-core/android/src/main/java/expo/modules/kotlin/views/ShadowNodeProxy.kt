@@ -10,6 +10,7 @@ class ShadowNodeProxy(expoView: ExpoView) {
 
   private var pendingFlush: ((stateWrapper: Any) -> Unit)? = null
   private var preDrawListener: ViewTreeObserver.OnPreDrawListener? = null
+  private val flushRunnable = Runnable { drainPendingFlush() }
 
   // Schedule in predraw listener to avoid early return in re-entrancy
   // We have a proper fix [here](https://github.com/facebook/react-native/pull/56311)
@@ -27,27 +28,53 @@ class ShadowNodeProxy(expoView: ExpoView) {
     }
   }
 
+  /**
+   * Reports where the native layout system drew this view inside its `Host`, in dp relative to the
+   * `Host`'s origin.
+   */
+  fun setContentOrigin(x: Double, y: Double) {
+    val view = weakExpoView.get() ?: return
+    stateUpdater.setContentOrigin(view.id, x, y)
+  }
+
+  fun clearContentOrigin() {
+    val view = weakExpoView.get() ?: return
+    stateUpdater.clearContentOrigin(view.id)
+  }
+
   private fun scheduleFlush(flush: (stateWrapper: Any) -> Unit) {
     pendingFlush = flush
-    val observer = weakExpoView.get()?.viewTreeObserver?.takeIf { it.isAlive } ?: return
+    val view = weakExpoView.get() ?: return
+    val observer = view.viewTreeObserver?.takeIf { it.isAlive }
 
-    // Remove the previous attached listener
-    preDrawListener?.let(observer::removeOnPreDrawListener)
+    if (observer != null) {
+      // Remove the previous attached listener
+      preDrawListener?.let(observer::removeOnPreDrawListener)
 
-    val listener = object : ViewTreeObserver.OnPreDrawListener {
-      override fun onPreDraw(): Boolean {
-        preDrawListener = null
-        // The view is attached while drawing, so this re-fetch returns the same
-        // observer that is dispatching us. removeOnPreDrawListener throws on a dead
-        // observer, hence the isAlive guard.
-        weakExpoView.get()?.viewTreeObserver?.takeIf { it.isAlive }?.removeOnPreDrawListener(this)
-        val flushNow = pendingFlush
-        pendingFlush = null
-        weakExpoView.get()?.stateWrapper?.let { flushNow?.invoke(it) }
-        return true
+      val listener = object : ViewTreeObserver.OnPreDrawListener {
+        override fun onPreDraw(): Boolean {
+          preDrawListener = null
+          // The view is attached while drawing, so this re-fetch returns the same
+          // observer that is dispatching us. removeOnPreDrawListener throws on a dead
+          // observer, hence the isAlive guard.
+          weakExpoView.get()?.viewTreeObserver?.takeIf { it.isAlive }?.removeOnPreDrawListener(this)
+          drainPendingFlush()
+          return true
+        }
       }
+      preDrawListener = listener
+      observer.addOnPreDrawListener(listener)
     }
-    preDrawListener = listener
-    observer.addOnPreDrawListener(listener)
+
+    // Predraw listener do not get called for each keyboard transition event so we add a fallback flush to be called here
+    // https://github.com/expo/expo/issues/47778
+    view.removeCallbacks(flushRunnable)
+    view.post(flushRunnable)
+  }
+
+  private fun drainPendingFlush() {
+    val flushNow = pendingFlush ?: return
+    pendingFlush = null
+    weakExpoView.get()?.stateWrapper?.let { flushNow.invoke(it) }
   }
 }

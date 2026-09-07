@@ -130,7 +130,11 @@ const MyDeliveriesScreen = ({ navigation }) => {
   return (
     <View style={tw(`flex-1 ${isDarkMode ? 'bg-slate-900' : 'bg-white'}`)}>
       <View style={tw(`p-6 pt-12 ${isDarkMode ? 'bg-slate-800' : 'bg-green-800'}`)}>
-        <Text style={tw('text-white text-2xl font-bold')}>My Deliveries</Text>
+        <TouchableOpacity style={tw('self-start px-4 py-2 rounded-full bg-green-600')}
+          onPress={() => navigation.goBack()}>
+          <Text style={tw('text-white font-medium')}>← Back</Text>
+        </TouchableOpacity>
+        <Text style={tw('text-white text-2xl font-bold mt-4')}>My Deliveries</Text>
       </View>
 
       <View style={tw('flex-row px-4 py-3')}>

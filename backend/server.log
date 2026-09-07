@@ -29,3 +29,2151 @@ MongoDB connected: localhost
   Health:      http://localhost:5000/api/health
 ========================================
 
+MongoDB connected: localhost
+   ✓ Admin verified: admin@agrilink.rw / Demo@123
+
+========================================
+  Agri-Link Rwanda API Server
+  Running on:  http://localhost:5000
+  Health:      http://localhost:5000/api/health
+========================================
+
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+Email transporter ready
+========================================
+EMAIL NOTIFICATION for farmer@demo.rw: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+Notification email sent to farmer@demo.rw: [Agri-Link Rwanda] Verification Request Submitted
+========================================
+EMAIL NOTIFICATION for lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] Crop Sold
+Message: Your product has been sold. Product: Mango. Quantity sold: 1 kg. Price per unit: 500 RWF. Total amount: 500 RWF. Buyer: Liliane Uwizeyimana (guest-1788598042695@agrilink.local). Buyer phone: 07809090908. Remaining quantity: 4933 kg. Order reference: ORD-300001CE
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Crop Sold
+Message: Your product has been sold. Product: Mango. Quantity sold: 1 kg. Price per unit: 500 RWF. Total amount: 500 RWF. Buyer: Liliane Uwizeyimana (guest-1788598042695@agrilink.local). Buyer phone: 07809090908. Remaining quantity: 4933 kg. Order reference: ORD-300001CE
+========================================
+========================================
+EMAIL NOTIFICATION for lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] Payment Received
+Message: Liliane Uwizeyimana has ordered 1 kg of Mango for 500 RWF. Awaiting payment confirmation.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Payment Received
+Message: Liliane Uwizeyimana has ordered 1 kg of Mango for 500 RWF. Awaiting payment confirmation.
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788598042695@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Your order for Mango (1 kg) has been placed. Please complete payment to lock the order.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Your order for Mango (1 kg) has been placed. Please complete payment to lock the order.
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788357879859@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for buyer@demo.rw: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for uwizyl@gmail.com: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363514444@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788513582479@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788523691118@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788524125601@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590606786@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590627708@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590785842@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788592737612@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596046543@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596988699@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596998887@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788597018940@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788366734935@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363771923@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788598042695@agrilink.local) has purchased 1 kg of Mango
+========================================
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49d07a23e85sm8712735e9.5 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-4859207c28fsm3648550f8f.5 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49ce831af89sm163148595e9.1 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49cfd3f8192sm93502795e9.3 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-485958f1493sm58751f8f.37 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49cee6024a8sm221561385e9.6 - gsmtp
+Notification email sent to lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] Crop Sold
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49cee6024a8sm221561375e9.6 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49cffdb2c40sm51285835e9.1 - gsmtp
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788598042695@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788513582479@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Crop Sold
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Payment Received
+Notification email sent to uwizyl@gmail.com: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788363514444@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788363771923@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788596988699@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788590785842@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788597018940@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788366734935@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788592737612@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] Payment Received
+========================================
+EMAIL NOTIFICATION for lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] Crop Sold
+Message: Your product has been sold. Product: Mango. Quantity sold: 4933 kg. Price per unit: 500 RWF. Total amount: 2466500 RWF. Buyer: Liliane Uwizeyimana (guest-1788599660891@agrilink.local). Buyer phone: 0780909097. Remaining quantity: 0 kg. Order reference: ORD-9FF88B16
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Crop Sold
+Message: Your product has been sold. Product: Mango. Quantity sold: 4933 kg. Price per unit: 500 RWF. Total amount: 2466500 RWF. Buyer: Liliane Uwizeyimana (guest-1788599660891@agrilink.local). Buyer phone: 0780909097. Remaining quantity: 0 kg. Order reference: ORD-9FF88B16
+========================================
+========================================
+EMAIL NOTIFICATION for lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] Payment Received
+Message: Liliane Uwizeyimana has ordered 4933 kg of Mango for 2466500 RWF. Awaiting payment confirmation.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Payment Received
+Message: Liliane Uwizeyimana has ordered 4933 kg of Mango for 2466500 RWF. Awaiting payment confirmation.
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788599660891@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Your order for Mango (4933 kg) has been placed. Please complete payment to lock the order.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Your order for Mango (4933 kg) has been placed. Please complete payment to lock the order.
+========================================
+========================================
+EMAIL NOTIFICATION for buyer@demo.rw: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788523691118@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788524125601@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590606786@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590627708@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for uwizyl@gmail.com: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788357879859@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363514444@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363771923@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788366734935@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590785842@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788592737612@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596046543@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596988699@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596998887@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788597018940@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788598042695@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788513582479@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+========================================
+EMAIL NOTIFICATION for lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Liliane Uwizeyimana (guest-1788599660891@agrilink.local) has purchased 4933 kg of Mango
+========================================
+Notification email sent to guest-1788596998887@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to uwizyl@gmail.com: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788596988699@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] Crop Sold
+Notification email sent to guest-1788597018940@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788363771923@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788366734935@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788513582479@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788596046543@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Crop Sold
+Notification email sent to guest-1788598042695@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788599660891@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Payment Received
+Notification email sent to guest-1788592737612@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788524125601@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788523691118@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788590627708@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788590606786@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] Payment Received
+Notification email sent to guest-1788363514444@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to buyer@demo.rw: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788357879859@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788590785842@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+MongoDB connected: localhost
+   ✓ Admin verified: admin@agrilink.rw / Demo@123
+
+========================================
+  Agri-Link Rwanda API Server
+  Running on:  http://localhost:5000
+  Health:      http://localhost:5000/api/health
+========================================
+
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations Test! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+Email transporter ready
+========================================
+EMAIL NOTIFICATION for farmer@demo.rw: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations Test! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+Notification email sent to farmer@demo.rw: [Agri-Link Rwanda] Verification Approved
+Failed to notify admins about new crop: Error: Notification validation failed: type: `crop_pending_approval` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.addCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:75:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    type: ValidatorError: `crop_pending_approval` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_pending_approval',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+========================================
+EMAIL NOTIFICATION for farmer@demo.rw: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with code E2E-CODE-7777) has been submitted for admin confirmation. The admin will confirm your payment and approve your product — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with code E2E-CODE-7777) has been submitted for admin confirmation. The admin will confirm your payment and approve your product — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Message: Post fee of 2,000 RWF indicated from Jean Farmer via code E2E-CODE-7777 for farmer Test User. Expected payee: Agri-Link Admin (0781793232). Review the farmer's product and payment, then confirm and approve the product to post it for buyers.
+========================================
+Notification email sent to farmer@demo.rw: [Agri-Link Rwanda] Post Fee Pending
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+========================================
+EMAIL NOTIFICATION for farmer@demo.rw: [Agri-Link Rwanda] Post Fee Confirmed
+Message: Congratulations Test! The admin has confirmed your post fee payment of 2,000 RWF. You can now add and post your products for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Confirmed
+Message: Congratulations Test! The admin has confirmed your post fee payment of 2,000 RWF. You can now add and post your products for buyers.
+========================================
+Notification email sent to farmer@demo.rw: [Agri-Link Rwanda] Post Fee Confirmed
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Confirmed
+Notification error: Error: Notification validation failed: type: `crop_approved` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at sendNotification (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\services\notificationService.js:27:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.approveCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:228:7) {
+  errors: {
+    type: ValidatorError: `crop_approved` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_approved',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+========================================
+EMAIL NOTIFICATION for uwizyl@gmail.com: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for buyer@demo.rw: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788357879859@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363514444@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788513582479@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788523691118@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788524125601@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590606786@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590627708@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590785842@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788592737612@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596046543@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596988699@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596998887@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788597018940@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788598042695@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788599660891@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for transporter@demo.rw: [Agri-Link Rwanda] New Transport Job
+Message: Test Maize (50 kg) from Rwanda. Submit your transport price to get the job.
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363771923@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788366734935@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 50 kg of Test Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+Notification email sent to guest-1788599660891@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788596998887@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788596988699@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788590785842@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788590627708@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788598042695@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788363514444@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788366734935@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to transporter@demo.rw: [Agri-Link Rwanda] New Transport Job
+Notification email sent to guest-1788523691118@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788357879859@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788524125601@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788513582479@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788596046543@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788590606786@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to buyer@demo.rw: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788597018940@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788592737612@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to uwizyl@gmail.com: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788363771923@agrilink.local: [Agri-Link Rwanda] New Crop Available
+MongoDB connected: localhost
+   ✓ Admin verified: admin@agrilink.rw / Demo@123
+
+⚠️  Port 5000 already in use. Trying 50001...
+
+========================================
+  Agri-Link Rwanda API Server
+  Running on:  http://localhost:5000
+  Health:      http://localhost:5000/api/health
+========================================
+
+
+========================================
+  Agri-Link Rwanda API Server
+  Running on:  http://localhost:50001
+  Health:      http://localhost:50001/api/health
+========================================
+
+MongoDB connected: localhost
+   ✓ Admin verified: admin@agrilink.rw / Demo@123
+
+========================================
+  Agri-Link Rwanda API Server
+  Running on:  http://localhost:5000
+  Health:      http://localhost:5000/api/health
+========================================
+
+Failed to notify admins about new crop: Error: Notification validation failed: type: `crop_pending_approval` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.addCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:75:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    type: ValidatorError: `crop_pending_approval` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_pending_approval',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 0780001112 (Airtel)) has been submitted for admin confirmation. The admin will confirm your payment and approve your product — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Message: Post fee of 2,000 RWF indicated from Jean Farmer via 0780001112 (Airtel) for farmer Test User. Expected payee: Agri-Link Admin (0781793232). Review the farmer's product and payment, then confirm and approve the product to post it for buyers.
+========================================
+Email transporter ready
+========================================
+EMAIL NOTIFICATION for farmer@demo.rw: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 0780001112 (Airtel)) has been submitted for admin confirmation. The admin will confirm your payment and approve your product — it is then posted automatically for buyers.
+========================================
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Notification email sent to farmer@demo.rw: [Agri-Link Rwanda] Post Fee Pending
+Notification error: Error: Notification validation failed: type: `crop_approved` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at sendNotification (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\services\notificationService.js:27:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.approveCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:230:7) {
+  errors: {
+    type: ValidatorError: `crop_approved` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_approved',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+========================================
+EMAIL NOTIFICATION for buyer@demo.rw: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788523691118@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788524125601@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590606786@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590627708@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590785842@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788592737612@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596046543@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596988699@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363514444@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788366734935@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788357879859@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363771923@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596998887@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788597018940@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788598042695@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788599660891@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for transporter@demo.rw: [Agri-Link Rwanda] New Transport Job
+Message: Test Beans (30 kg) from Rwanda. Submit your transport price to get the job.
+========================================
+========================================
+EMAIL NOTIFICATION for lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788513582479@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 30 kg of Test Beans at 800 RWF/undefined. Location: Rwanda
+========================================
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49cee7febb4sm235946805e9.14 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49ce4761dd1sm178749085e9.0 - gsmtp
+Notification email sent to guest-1788596998887@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-485885be1c1sm12042630f8f.32 - gsmtp
+Notification email sent to guest-1788590785842@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to buyer@demo.rw: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788366734935@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788590606786@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788597018940@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788357879859@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788596046543@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788363514444@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788524125601@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788596988699@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788598042695@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to transporter@demo.rw: [Agri-Link Rwanda] New Transport Job
+Notification email sent to guest-1788523691118@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788513582479@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788363771923@agrilink.local: [Agri-Link Rwanda] New Crop Available
+MongoDB connected: localhost
+   ✓ Admin verified: admin@agrilink.rw / Demo@123
+
+========================================
+  Agri-Link Rwanda API Server
+  Running on:  http://localhost:5000
+  Health:      http://localhost:5000/api/health
+========================================
+
+Email transporter ready
+========================================
+VERIFICATION CODE for liliane.u@hopehavenschool.org: 926955
+User: fr4tgt
+========================================
+Verification email sent to liliane.u@hopehavenschool.org
+Using console fallback — set EMAIL_HOST/EMAIL_USER/EMAIL_PASS in .env for real email delivery
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Request Submitted
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations fr4tgt! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations fr4tgt! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Approved
+Failed to notify admins about new crop: Error: Notification validation failed: type: `crop_pending_approval` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.addCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:75:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    type: ValidatorError: `crop_pending_approval` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_pending_approval',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+Failed to notify admins about new crop: Error: Notification validation failed: type: `crop_pending_approval` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.addCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:75:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    type: ValidatorError: `crop_pending_approval` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_pending_approval',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 0781797867 (MTN)) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 0781797867 (MTN)) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Message: Post fee of 2,000 RWF indicated from fr4tgt via 0781797867 (MTN) for farmer fr4tgt maneke. Expected payee: Agri-Link Admin (0781793232). Review the farmer's product and payment, then confirm and approve the product to post it for buyers.
+========================================
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Pending
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Confirmed
+Message: Congratulations fr4tgt! The admin has confirmed your post fee payment of 2,000 RWF. You can now add and post your products for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Confirmed
+Message: Congratulations fr4tgt! The admin has confirmed your post fee payment of 2,000 RWF. You can now add and post your products for buyers.
+========================================
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Confirmed
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Confirmed
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Your crop "Tomatoes" was rejected: be faithfully
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Your crop "Tomatoes" was rejected: be faithfully
+========================================
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Agri-Link Rwanda
+Failed to notify admins about new crop: Error: Notification validation failed: type: `crop_pending_approval` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.addCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:75:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    type: ValidatorError: `crop_pending_approval` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_pending_approval',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 07987487734 (MTN)) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 07987487734 (MTN)) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Message: Post fee of 2,000 RWF indicated from fr4tgt via 07987487734 (MTN) for farmer fr4tgt maneke. Expected payee: Agri-Link Admin (0781793232). Review the farmer's product and payment, then confirm and approve the product to post it for buyers.
+========================================
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Pending
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Notification error: Error: Notification validation failed: type: `crop_approved` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at sendNotification (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\services\notificationService.js:27:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.approveCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:230:7) {
+  errors: {
+    type: ValidatorError: `crop_approved` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_approved',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+========================================
+EMAIL NOTIFICATION for buyer@demo.rw: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363514444@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788357879859@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363771923@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788366734935@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788523691118@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788524125601@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590785842@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590627708@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788597018940@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788513582479@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788592737612@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590606786@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596046543@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788598042695@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788599660891@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for transporter@demo.rw: [Agri-Link Rwanda] New Transport Job
+Message: vocado (2000 kg) from trhetrhgrtg. Submit your transport price to get the job.
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596998887@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596988699@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 2000 kg of vocado at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49cf770fcf5sm136669875e9.6 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-485885c5bbdsm11801662f8f.36 - gsmtp
+Notification email sent to guest-1788357879859@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788590627708@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788598042695@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788363514444@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788590785842@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788524125601@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788596998887@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788366734935@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788597018940@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788599660891@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788363771923@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788590606786@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788523691118@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788592737612@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to buyer@demo.rw: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788513582479@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to transporter@demo.rw: [Agri-Link Rwanda] New Transport Job
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Request Submitted
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations fr4tgt! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations fr4tgt! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Approved
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Request Submitted
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations fr4tgt! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations fr4tgt! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Approved
+Failed to notify admins about new crop: Error: Notification validation failed: type: `crop_pending_approval` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.addCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:75:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    type: ValidatorError: `crop_pending_approval` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_pending_approval',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 0789876874 (MTN)) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 0789876874 (MTN)) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Message: Post fee of 2,000 RWF indicated from fr4tgt via 0789876874 (MTN) for farmer fr4tgt mumararungu. Expected payee: Agri-Link Admin (0781793232). Review the farmer's product and payment, then confirm and approve the product to post it for buyers.
+========================================
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Pending
+Notification error: Error: Notification validation failed: type: `crop_approved` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at sendNotification (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\services\notificationService.js:27:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.approveCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:230:7) {
+  errors: {
+    type: ValidatorError: `crop_approved` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_approved',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+========================================
+EMAIL NOTIFICATION for buyer@demo.rw: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788599660891@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788357879859@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363514444@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788366734935@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363771923@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788513582479@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788524125601@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788523691118@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590606786@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590627708@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788592737612@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590785842@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596046543@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596988699@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596998887@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for transporter@demo.rw: [Agri-Link Rwanda] New Transport Job
+Message: beans (3000 kg) from trhetrhgrtg. Submit your transport price to get the job.
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788597018940@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788598042695@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 3000 kg of beans at 200 RWF/undefined. Location: trhetrhgrtg
+========================================
+Notification email sent to guest-1788590785842@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788596998887@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788592737612@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788597018940@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788590606786@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788598042695@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788596046543@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to transporter@demo.rw: [Agri-Link Rwanda] New Transport Job
+Notification email sent to guest-1788513582479@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788599660891@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788366734935@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to buyer@demo.rw: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788524125601@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788596988699@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788363514444@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788357879859@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788523691118@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788363771923@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788590627708@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Failed to notify admins about new crop: Error: Notification validation failed: type: `crop_pending_approval` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.addCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:75:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    type: ValidatorError: `crop_pending_approval` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_pending_approval',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with code 7478) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with code 7478) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Message: Post fee of 2,000 RWF indicated from fr4tgt via code 7478 for farmer fr4tgt mumararungu. Expected payee: Agri-Link Admin (0781793232). Review the farmer's product and payment, then confirm and approve the product to post it for buyers.
+========================================
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Pending
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Your crop "mana" was rejected: not the one
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Your crop "mana" was rejected: not the one
+========================================
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Agri-Link Rwanda
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Request Submitted
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations fr4tgt! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations fr4tgt! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Approved
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Request Submitted
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations fr4tgt! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations fr4tgt! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Approved
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Request Submitted
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations fr4tgt! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations fr4tgt! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Approved
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+MongoDB connected: localhost
+   ✓ Admin verified: admin@agrilink.rw / Demo@123
+
+========================================
+  Agri-Link Rwanda API Server
+  Running on:  http://localhost:5000
+  Health:      http://localhost:5000/api/health
+========================================
+
+Failed to notify admins about new crop: Error: Notification validation failed: type: `crop_pending_approval` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.addCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:94:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    type: ValidatorError: `crop_pending_approval` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_pending_approval',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+Failed to notify admins about new crop: Error: Notification validation failed: type: `crop_pending_approval` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.addCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:94:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    type: ValidatorError: `crop_pending_approval` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_pending_approval',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 0781793234 (MTN)) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Message: Post fee of 2,000 RWF indicated from fr4tgt via 0781793234 (MTN) for farmer fr4tgt murunigfff. Expected payee: Agri-Link Admin (0781793232). Review the farmer's product and payment, then confirm and approve the product to post it for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for farmer@demo.rw: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 0789990001 (MTN)) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 0789990001 (MTN)) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Message: Post fee of 2,000 RWF indicated from Jean Farmer via 0789990001 (MTN) for farmer Test User. Expected payee: Agri-Link Admin (0781793232). Review the farmer's product and payment, then confirm and approve the product to post it for buyers.
+========================================
+Email transporter ready
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 0781793234 (MTN)) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Notification email sent to farmer@demo.rw: [Agri-Link Rwanda] Post Fee Pending
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Pending
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Confirmed
+Message: Congratulations fr4tgt! The admin has confirmed your post fee payment of 2,000 RWF. You can now add and post your products for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Confirmed
+Message: Congratulations fr4tgt! The admin has confirmed your post fee payment of 2,000 RWF. You can now add and post your products for buyers.
+========================================
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Confirmed
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Confirmed
+========================================
+EMAIL NOTIFICATION for farmer@demo.rw: [Agri-Link Rwanda] Post Fee Rejected
+Message: We could not confirm your post fee payment. Reason: uh. Please check and try again.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Rejected
+Message: We could not confirm your post fee payment. Reason: uh. Please check and try again.
+========================================
+Notification email sent to farmer@demo.rw: [Agri-Link Rwanda] Post Fee Rejected
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Rejected
+Notification error: Error: Notification validation failed: type: `crop_approved` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at sendNotification (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\services\notificationService.js:27:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.approveCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:245:7) {
+  errors: {
+    type: ValidatorError: `crop_approved` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_approved',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+========================================
+EMAIL NOTIFICATION for buyer@demo.rw: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788524125601@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590606786@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590627708@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590785842@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788592737612@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596046543@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596988699@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596998887@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788357879859@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363514444@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363771923@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788366734935@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788597018940@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788598042695@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788599660891@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for transporter@demo.rw: [Agri-Link Rwanda] New Transport Job
+Message: kk,ku (678 kg) from trhetrhgrtg. Submit your transport price to get the job.
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788523691118@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788513582479@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 678 kg of kk,ku at 68 RWF/undefined. Location: trhetrhgrtg
+========================================
+Notification email sent to guest-1788513582479@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788363771923@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788357879859@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788523691118@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788596998887@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] New Crop Available
+Notification email sent to buyer@demo.rw: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788524125601@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788596046543@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788590606786@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788366734935@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788590785842@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788597018940@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788590627708@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788592737612@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788598042695@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788363514444@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to transporter@demo.rw: [Agri-Link Rwanda] New Transport Job
+Notification email sent to guest-1788599660891@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788596988699@agrilink.local: [Agri-Link Rwanda] New Crop Available
+MongoDB connected: localhost
+   ✓ Admin verified: admin@agrilink.rw / Demo@123
+
+========================================
+  Agri-Link Rwanda API Server
+  Running on:  http://localhost:5000
+  Health:      http://localhost:5000/api/health
+========================================
+
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+Email transporter ready
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Request Submitted
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations fr4tgt! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations fr4tgt! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Verification Approved
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+MulterError: File too large
+    at abortWithCode (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\multer\lib\make-middleware.js:73:22)
+    at FileStream.<anonymous> (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\multer\lib\make-middleware.js:136:11)
+    at FileStream.emit (node:events:518:28)
+    at SBMH.ssCb [as _cb] (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\busboy\lib\types\multipart.js:479:32)
+    at feed (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\streamsearch\lib\sbmh.js:248:10)
+    at SBMH.push (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\streamsearch\lib\sbmh.js:104:16)
+    at Multipart._write (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\busboy\lib\types\multipart.js:567:19)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+MulterError: File too large
+    at abortWithCode (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\multer\lib\make-middleware.js:73:22)
+    at FileStream.<anonymous> (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\multer\lib\make-middleware.js:136:11)
+    at FileStream.emit (node:events:518:28)
+    at SBMH.ssCb [as _cb] (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\busboy\lib\types\multipart.js:479:32)
+    at feed (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\streamsearch\lib\sbmh.js:248:10)
+    at SBMH.push (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\streamsearch\lib\sbmh.js:104:16)
+    at Multipart._write (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\busboy\lib\types\multipart.js:567:19)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+Failed to notify admins about new crop: Error: Notification validation failed: type: `crop_pending_approval` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.addCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:94:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    type: ValidatorError: `crop_pending_approval` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_pending_approval',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+========================================
+EMAIL NOTIFICATION for farmer@demo.rw: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+========================================
+EMAIL NOTIFICATION for farmer@demo.rw: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations Jean! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations Jean! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+========================================
+EMAIL NOTIFICATION for farmer@demo.rw: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 0789990001 (MTN)) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 0789990001 (MTN)) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Message: Post fee of 2,000 RWF indicated from Jean Farmer via 0789990001 (MTN) for farmer Jean Uwizeye. Expected payee: Agri-Link Admin (0781793232). Review the farmer's product and payment, then confirm and approve the product to post it for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 07817982324 (MTN)) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 07817982324 (MTN)) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Message: Post fee of 2,000 RWF indicated from fr4tgt via 07817982324 (MTN) for farmer fr4tgt juibh. Expected payee: Agri-Link Admin (0781793232). Review the farmer's product and payment, then confirm and approve the product to post it for buyers.
+========================================
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Notification email sent to farmer@demo.rw: [Agri-Link Rwanda] Post Fee Pending
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Notification email sent to farmer@demo.rw: [Agri-Link Rwanda] Verification Approved
+Notification email sent to farmer@demo.rw: [Agri-Link Rwanda] Verification Request Submitted
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Pending
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Confirmed
+Message: Congratulations fr4tgt! The admin has confirmed your post fee payment of 2,000 RWF. You can now add and post your products for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Confirmed
+Message: Congratulations fr4tgt! The admin has confirmed your post fee payment of 2,000 RWF. You can now add and post your products for buyers.
+========================================
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Confirmed
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Post Fee Confirmed
+========================================
+EMAIL NOTIFICATION for farmer@demo.rw: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Request Submitted
+Message: Your verification request has been submitted for review. You will be notified once the admin makes a decision.
+========================================
+========================================
+EMAIL NOTIFICATION for farmer@demo.rw: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations Jean! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Verification Approved
+Message: Congratulations Jean! Your verification request has been approved. You can now pay the post fee of 2,000 RWF. Once the admin confirms your payment, you can start posting your products.
+========================================
+Failed to notify admins about new crop: Error: Notification validation failed: type: `crop_pending_approval` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at exports.addCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:94:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  errors: {
+    type: ValidatorError: `crop_pending_approval` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_pending_approval',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+========================================
+EMAIL NOTIFICATION for farmer@demo.rw: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 0789990001 (MTN)) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Message: Your post fee of 2,000 RWF (paid with 0789990001 (MTN)) has been submitted. The admin will review your product and approve it — it is then posted automatically for buyers.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Received
+Message: Post fee of 2,000 RWF indicated from Jean Farmer via 0789990001 (MTN) for farmer Jean Uwizeye. Expected payee: Agri-Link Admin (0781793232). Review the farmer's product and payment, then confirm and approve the product to post it for buyers.
+========================================
+Notification error: Error: Notification validation failed: type: `crop_approved` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at sendNotification (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\services\notificationService.js:27:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.approveCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:248:7) {
+  errors: {
+    type: ValidatorError: `crop_approved` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_approved',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+========================================
+EMAIL NOTIFICATION for buyer@demo.rw: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788592737612@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596046543@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596988699@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596998887@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788597018940@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788598042695@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788599660891@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363514444@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788357879859@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363771923@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788366734935@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788524125601@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590606786@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788513582479@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788523691118@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for transporter@demo.rw: [Agri-Link Rwanda] New Transport Job
+Message: Cycle2 Maize (5 kg) from Rwanda. Submit your transport price to get the job.
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590627708@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590785842@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: Jean Farmer listed 5 kg of Cycle2 Maize at 500 RWF/undefined. Location: Rwanda
+========================================
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49cee6023d6sm235065135e9.8 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49cee6023d6sm235065125e9.8 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49ce5533ffbsm213214455e9.3 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49ce5563c6csm222823545e9.4 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49cee6023edsm233832995e9.7 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49cee6023d6sm235065145e9.8 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49d08144037sm25849585e9.7 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-48591eb3d3bsm4323164f8f.0 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49ce5941cb4sm125589455e9.4 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49cfbdacc45sm124456125e9.11 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-485885be01bsm13457880f8f.31 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-485881353e8sm14459681f8f.1 - gsmtp
+Notification email sent to transporter@demo.rw: [Agri-Link Rwanda] New Transport Job
+Notification email sent to guest-1788599660891@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to farmer@demo.rw: [Agri-Link Rwanda] Post Fee Pending
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Post Fee Pending
+Notification email sent to farmer@demo.rw: [Agri-Link Rwanda] Verification Request Submitted
+Notification email sent to guest-1788524125601@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification error: Error: Notification validation failed: type: `crop_approved` is not a valid enum value for path `type`.
+    at ValidationError.inspect (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\error\validation.js:52:26)
+    at formatValue (node:internal/util/inspect:877:19)
+    at inspect (node:internal/util/inspect:404:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2407:40)
+    at formatWithOptions (node:internal/util/inspect:2269:10)
+    at console.value (node:internal/console/constructor:345:14)
+    at console.error (node:internal/console/constructor:412:61)
+    at sendNotification (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\services\notificationService.js:27:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.approveCrop (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\cropController.js:248:7) {
+  errors: {
+    type: ValidatorError: `crop_approved` is not a valid enum value for path `type`.
+        at validate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1440:13)
+        at SchemaType.doValidate (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\schemaType.js:1424:7)
+        at C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\node_modules\mongoose\lib\document.js:3134:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:85:11) {
+      properties: [Object],
+      kind: 'enum',
+      path: 'type',
+      value: 'crop_approved',
+      reason: undefined,
+      [Symbol(mongoose#validatorError)]: true
+    }
+  },
+  _message: 'Notification validation failed'
+}
+========================================
+EMAIL NOTIFICATION for buyer@demo.rw: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596988699@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596998887@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788597018940@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788598042695@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788599660891@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788357879859@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363771923@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363514444@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788366734935@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788513582479@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788523691118@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590606786@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590785842@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590627708@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788524125601@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for transporter@demo.rw: [Agri-Link Rwanda] New Transport Job
+Message: Mangoes (500 kg) from trhetrhgrtg. Submit your transport price to get the job.
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788592737612@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596046543@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Message: fr4tgt listed 500 kg of Mangoes at 2,000 RWF/undefined. Location: trhetrhgrtg
+========================================
+Notification email sent to guest-1788363514444@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49cee6158e9sm235935735e9.12 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49cee6023edsm233839235e9.7 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49d08144037sm25856735e9.7 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49d00031c95sm90693455e9.11 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49ce5952560sm243032415e9.3 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-485885bbb51sm14436800f8f.30 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-485883953cfsm11708998f8f.13 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-4858dd90e1fsm10844286f8f.28 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-4858d312ca0sm11986268f8f.4 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-485885be01bsm13458513f8f.31 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49cee5f912esm241570165e9.4 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49d00031c95sm90693465e9.11 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-4858d2693e8sm11400334f8f.3 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49d03543064sm62547395e9.13 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-485885b7bfasm14763947f8f.29 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-485883a9234sm14226564f8f.14 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49cee7febb4sm254459765e9.14 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49cf755c22esm150580735e9.0 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49ce551bf7asm177949245e9.2 - gsmtp
+Notification email sent to guest-1788598042695@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788357879859@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788366734935@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788590606786@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788513582479@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788523691118@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788363771923@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788596988699@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Notification email sent to guest-1788590627708@agrilink.local: [Agri-Link Rwanda] New Crop Available
+Error: Select MTN or Airtel for Mobile Money payments
+    at createOrder (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\orderController.js:53:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.placeOrder (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\orderController.js:192:34)
+Error: Select MTN or Airtel for Mobile Money payments
+    at createOrder (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\orderController.js:53:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.placeOrder (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\orderController.js:192:34)
+Error: Select MTN or Airtel for Mobile Money payments
+    at createOrder (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\orderController.js:53:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.placeOrder (C:\Users\LilianeUWIZEYIMANA\Music\thazo\backend\src\controllers\orderController.js:192:34)
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Crop Sold
+Message: Your product has been sold. Product: Mangoes. Quantity sold: 5 kg. Price per unit: 2000 RWF. Total amount: 10000 RWF. Buyer: Lilu (lilianeuwizeyimana363@gmail.com). Buyer phone: 078932215. Remaining quantity: 495 kg. Order reference: ORD-2AAF0C93
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Crop Sold
+Message: Your product has been sold. Product: Mangoes. Quantity sold: 5 kg. Price per unit: 2000 RWF. Total amount: 10000 RWF. Buyer: Lilu (lilianeuwizeyimana363@gmail.com). Buyer phone: 078932215. Remaining quantity: 495 kg. Order reference: ORD-2AAF0C93
+========================================
+========================================
+EMAIL NOTIFICATION for liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Payment Received
+Message: Lilu has ordered 5 kg of Mangoes for 10000 RWF using Mobile Money. Please confirm receipt.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Payment Received
+Message: Lilu has ordered 5 kg of Mangoes for 10000 RWF using Mobile Money. Please confirm receipt.
+========================================
+========================================
+EMAIL NOTIFICATION for lilianeuwizeyimana363@gmail.com: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Your order for Mangoes (5 kg) has been placed. Please complete payment to lock the order.
+========================================
+========================================
+EMAIL NOTIFICATION for admin@agrilink.rw: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Your order for Mangoes (5 kg) has been placed. Please complete payment to lock the order.
+========================================
+========================================
+EMAIL NOTIFICATION for buyer@demo.rw: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788598042695@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788599660891@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363514444@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590606786@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788363771923@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788523691118@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590627708@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788513582479@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788592737612@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788524125601@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788590785842@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596046543@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788366734935@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788357879859@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596988699@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788596998887@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+========================================
+EMAIL NOTIFICATION for guest-1788597018940@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Message: Lilu (lilianeuwizeyimana363@gmail.com) has purchased 5 kg of Mangoes
+========================================
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-485883953cfsm11785990f8f.13 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49ce46696e8sm188092225e9.0 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-4858bc74298sm11296773f8f.6 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-485958f1493sm2154144f8f.37 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 5b1f17b1804b1-49d0656e7bbsm45292745e9.10 - gsmtp
+Failed to send notification email: Data command failed: 421-4.3.0 Temporary System Problem. Try again later. For more information, go to
+421 4.3.0  https://support.google.com/a/answer/3221692 ffacd0b85a97d-485885be1c1sm13557164f8f.32 - gsmtp
+Notification email sent to guest-1788596988699@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788597018940@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788599660891@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788598042695@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to buyer@demo.rw: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to liliane.u@hopehavenschool.org: [Agri-Link Rwanda] Crop Sold
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Crop Sold
+Notification email sent to guest-1788590606786@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788524125601@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788357879859@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788513582479@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788596046543@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788523691118@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788590785842@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788592737612@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to guest-1788596998887@agrilink.local: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Agri-Link Rwanda
+Notification email sent to admin@agrilink.rw: [Agri-Link Rwanda] Payment Received

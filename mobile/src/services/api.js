@@ -1,12 +1,16 @@
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Platform } from 'react-native';
 
-const API_BASE_URL = Platform.OS === 'web' ? 'http://localhost:5000/api' : 'http://10.0.2.2:5000/api';
+const getBaseUrl = () => {
+  if (process.env.EXPO_PUBLIC_API_URL) {
+    return process.env.EXPO_PUBLIC_API_URL.replace(/\/$/, '');
+  }
+  throw new Error('EXPO_PUBLIC_API_URL is not configured. Add it to mobile/.env.');
+};
 
 const api = axios.create({
-  baseURL: API_BASE_URL,
-  timeout: 15000,
+  baseURL: getBaseUrl(),
+  timeout: 30000,
   headers: { 'Content-Type': 'application/json' },
 });
 
@@ -17,9 +21,64 @@ api.interceptors.request.use(async (config) => {
   }
   if (config.data instanceof FormData) {
     delete config.headers['Content-Type'];
+    // Uploads (images, videos) can be large and take time over a network.
+    config.timeout = 180000;
   }
   return config;
 });
+
+/**
+ * Upload a multipart FormData using the platform's native fetch.
+ *
+ * Unlike axios, React Native's `fetch` reliably sends FormData file parts
+ * (`{ uri, name, type }`). axios 1.x can hang/timing-out on RN multipart
+ * uploads, so file-heavy requests (e.g. verification request) go through here.
+ */
+export const uploadMultipart = async (path, formData, method = 'POST') => {
+  const token = await AsyncStorage.getItem('token');
+  const headers = {};
+  if (token) headers.Authorization = `Bearer ${token}`;
+  // Do NOT set Content-Type: let the platform set the multipart boundary.
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 180000);
+
+  try {
+    const response = await fetch(`${getBaseUrl()}${path}`, {
+      method,
+      headers,
+      body: formData,
+      signal: controller.signal,
+    });
+
+    let data = null;
+    const text = await response.text();
+    try {
+      data = text ? JSON.parse(text) : null;
+    } catch (e) {
+      data = { message: text };
+    }
+
+    if (!response.ok) {
+      const error = new Error(data?.message || `Upload failed (${response.status})`);
+      error.response = { status: response.status, data };
+      throw error;
+    }
+    return { data, status: response.status };
+  } catch (err) {
+    if (err.name === 'AbortError') {
+      const timeoutError = new Error('Upload timed out. Please try again.');
+      timeoutError.code = 'ECONNABORTED';
+      throw timeoutError;
+    }
+    if (err && !err.response) {
+      err.response = { data: { message: err.message || 'Network error during upload' } };
+    }
+    throw err;
+  } finally {
+    clearTimeout(timeout);
+  }
+};
 
 api.interceptors.response.use(
   (response) => response,
@@ -28,6 +87,15 @@ api.interceptors.response.use(
       await AsyncStorage.removeItem('token');
       await AsyncStorage.removeItem('user');
     }
+    const config = error.config;
+    if (!config || config.__isRetryRequest) return Promise.reject(error);
+
+    if (!error.response || error.code === 'ECONNABORTED' || error.code === 'ERR_NETWORK') {
+      config.__isRetryRequest = true;
+      await new Promise((r) => setTimeout(r, 1000));
+      return api(config);
+    }
+
     return Promise.reject(error);
   }
 );
@@ -51,8 +119,10 @@ export const authAPI = {
 export const farmerAPI = {
   getProfile: (id) => api.get(`/farmers/profile/${id || ''}`),
   updateFarmDetails: (data) => api.put('/farmers/farm-details', data),
-  submitVerification: () => api.post('/farmers/verification-request'),
+  submitVerification: (data) => api.post('/farmers/verification-request', data),
   getVerificationStatus: () => api.get('/farmers/verification-status'),
+  payPostFee: (payload) => api.post('/farmers/post-fee', payload),
+  getSalesHistory: () => api.get('/farmers/sales-history'),
   getRecentActivity: () => api.get('/farmers/recent-activity'),
   getFarmers: (params) => api.get('/farmers', { params }),
 };
@@ -112,6 +182,12 @@ export const notificationAPI = {
 
 export const adminAPI = {
   getDashboard: () => api.get('/admin/dashboard'),
+  getVerifications: (params) => api.get('/admin/verifications', { params }),
+  approveVerification: (id) => api.put(`/admin/verifications/${id}/approve`),
+  rejectVerification: (id, reason) => api.put(`/admin/verifications/${id}/reject`, { reason }),
+  getPostFeePayments: (params) => api.get('/admin/post-fee-payments', { params }),
+  confirmPostFee: (id) => api.put(`/admin/post-fee-payments/${id}/confirm`),
+  rejectPostFee: (id, reason) => api.put(`/admin/post-fee-payments/${id}/reject`, { reason }),
   getCrops: (params) => api.get('/admin/crops', { params }),
   getUsers: (params) => api.get('/admin/users', { params }),
   getUserById: (id) => api.get(`/admin/users/${id}`),
@@ -131,8 +207,10 @@ export const adminAPI = {
 
 export const orderAPI = {
   place: (data) => api.post('/orders', data),
+  placeGuest: (data) => api.post('/orders/guest', data),
   getMine: () => api.get('/orders/mine'),
   confirmReceipt: (id) => api.put(`/orders/${id}/confirm`),
+  confirmFarmerReceipt: (id) => api.put(`/orders/${id}/farmer-confirm-receipt`),
   payWithMobileMoney: (id, phone, network) => api.put(`/orders/${id}/mobile-pay`, { phone, network }),
   checkPaymentStatus: (id) => api.get(`/orders/${id}/payment-status`),
   getTransporters: (params) => api.get('/orders/transporters', { params }),

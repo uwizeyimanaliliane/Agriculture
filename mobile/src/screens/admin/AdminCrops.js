@@ -62,7 +62,12 @@ const AdminCrops = () => {
           </Text>
           {item.user && (
             <Text style={tw(`text-xs mt-0.5 ${isDarkMode ? 'text-slate-500' : 'text-gray-400'}`)}>
-              Farmer: {item.user.name} ({item.user.email})
+              Posted by: {item.user.name} · {item.user.phone || ''} · {item.user.email}
+            </Text>
+          )}
+          {item.farmer && (
+            <Text style={tw(`text-xs ${isDarkMode ? 'text-slate-500' : 'text-gray-400'}`)}>
+              Address: {[item.farmer.address?.province, item.farmer.address?.district, item.farmer.address?.sector, item.farmer.address?.cell, item.user?.location?.district].filter(Boolean).join(', ') || 'Unknown'}
             </Text>
           )}
           <Text style={tw(`text-xs ${isDarkMode ? 'text-slate-500' : 'text-gray-400'}`)}>

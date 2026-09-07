@@ -6,6 +6,11 @@ config({ path: './.env' });
 module.exports = {
   expo: {
     ...(appJson.expo || {}),
+    ...(process.env.EXPO_OWNER ? { owner: process.env.EXPO_OWNER } : {}),
+    plugins: [
+      ...(appJson.expo?.plugins || []),
+      'expo-sharing',
+    ],
     extra: {
       ...(appJson.expo?.extra || {}),
       EXPO_PUBLIC_GOOGLE_CLIENT_ID: process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID,

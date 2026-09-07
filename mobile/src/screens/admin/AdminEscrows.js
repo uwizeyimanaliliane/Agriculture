@@ -7,7 +7,7 @@ import { formatCurrency, formatDate } from '../../utils/formatters';
 import { alert, confirmAlert } from '../../utils/platform';
 import ContactButtons from '../../components/ContactButtons';
 
-const AdminEscrows = () => {
+const AdminEscrows = ({ navigation }) => {
   const [escrows, setEscrows] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('');
@@ -97,7 +97,11 @@ const AdminEscrows = () => {
   return (
     <View style={tw(`flex-1 ${isDarkMode ? 'bg-slate-900' : 'bg-white'}`)}>
       <View style={tw(`p-5 pt-12 ${isDarkMode ? 'bg-slate-800' : 'bg-green-800'}`)}>
-        <Text style={tw('text-white text-xl font-bold')}>Escrow Payments</Text>
+        <TouchableOpacity style={tw('self-start px-4 py-2 rounded-full bg-green-600')}
+          onPress={() => navigation.goBack()}>
+          <Text style={tw('text-white font-medium')}>← Back</Text>
+        </TouchableOpacity>
+        <Text style={tw('text-white text-xl font-bold mt-4')}>Escrow Payments</Text>
       </View>
 
       <View style={tw('flex-row px-4 py-3 gap-2')}>

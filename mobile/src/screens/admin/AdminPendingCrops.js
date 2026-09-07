@@ -134,21 +134,18 @@ const AdminPendingCrops = ({ navigation }) => {
           onPress={() => setTab('pending')}>
           <Text style={tw(`font-medium text-sm ${tab === 'pending' ? 'text-white' : isDarkMode ? 'text-slate-300' : 'text-gray-700'}`)}>Pending</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={tw(`flex-1 py-2 rounded-xl items-center ${tab === 'transport' ? 'bg-green-700' : isDarkMode ? 'bg-slate-700' : 'bg-gray-200'}`)}
-          onPress={() => setTab('transport')}>
-          <Text style={tw(`font-medium text-sm ${tab === 'transport' ? 'text-white' : isDarkMode ? 'text-slate-300' : 'text-gray-700'}`)}>Needs Transporter</Text>
-        </TouchableOpacity>
       </View>
 
-      {tab === 'pending' ? (
-        <FlatList data={crops} keyExtractor={(item) => item._id}
+      <FlatList data={crops} keyExtractor={(item) => item._id}
           contentContainerStyle={{ padding: 16 }}
           ListEmptyComponent={
             <View style={tw('flex-1 justify-center items-center pt-20')}>
               <Text style={tw(`text-lg ${isDarkMode ? 'text-slate-400' : 'text-gray-400'}`)}>No pending crops</Text>
             </View>
           }
-          renderItem={({ item }) => (
+          renderItem={({ item }) => {
+            const paymentConfirmed = item.farmer?.postFeeStatus === 'confirmed';
+            return (
             <View style={tw(`p-4 mb-3 rounded-2xl shadow-sm ${isDarkMode ? 'bg-slate-800' : 'bg-white'}`)}>
               <View style={tw('flex-row')}>
                 {item.photos?.[0] ? (
@@ -171,14 +168,37 @@ const AdminPendingCrops = ({ navigation }) => {
                   <Text style={tw(`text-xs mt-1 ${isDarkMode ? 'text-slate-500' : 'text-gray-400'}`)}>
                     By: {item.user?.name || 'Unknown'} ({item.user?.email || ''})
                   </Text>
+                  <Text style={tw(`text-xs mt-1 ${isDarkMode ? 'text-slate-500' : 'text-gray-400'}`)}>
+                    Phone: {item.user?.phone || 'N/A'}
+                  </Text>
                   <Text style={tw(`text-xs ${isDarkMode ? 'text-slate-500' : 'text-gray-400'}`)}>
-                    Location: {item.user?.location?.district || item.location?.district || 'N/A'}
+                    Address: {[item.farmer?.address?.province, item.farmer?.address?.district, item.farmer?.address?.sector, item.farmer?.address?.cell, item.user?.location?.district].filter(Boolean).join(', ') || 'N/A'}
+                  </Text>
+                  <Text style={tw(`text-xs ${isDarkMode ? 'text-slate-500' : 'text-gray-400'}`)}>
+                    Posted by: {[item.farmer?.firstName, item.farmer?.lastName].filter(Boolean).join(' ') || item.user?.name} · {item.farmer?.contactNumber || item.user?.phone || ''}
+                  </Text>
+                  <Text style={tw(`text-xs mt-1 ${item.farmer?.postFeeStatus === 'confirmed' ? 'text-green-600' : 'text-amber-600'}`)}>
+                    Post fee: {item.farmer?.postFeeStatus === 'confirmed'
+                      ? '✓ Payment confirmed (2,000 RWF)'
+                      : item.farmer?.postFeeStatus === 'pending'
+                        ? '⏳ Payment submitted (2,000 RWF)'
+                        : 'No payment yet (farmer must pay 2,000 RWF first)'}
+                    {item.farmer?.postFeePhone ? ` · from ${item.farmer.postFeePhone}` : ''}
+                    {item.farmer?.postFeeCode ? ` · code ${item.farmer.postFeeCode}` : ''}
                   </Text>
                   <View style={tw('flex-row mt-3 gap-2')}>
-                    <TouchableOpacity style={tw('flex-1 bg-green-700 py-2 rounded-lg items-center')}
-                      onPress={() => handleApprove(item)}>
-                      <Text style={tw('text-white font-medium text-sm')}>Approve</Text>
-                    </TouchableOpacity>
+                    {paymentConfirmed ? (
+                      <TouchableOpacity style={tw('flex-1 bg-green-700 py-2 rounded-lg items-center')}
+                        onPress={() => handleApprove(item)}>
+                        <Text style={tw('text-white font-medium text-sm')}>Approve & Post to Buyers</Text>
+                      </TouchableOpacity>
+                    ) : (
+                      <View style={tw(`flex-1 py-2 rounded-lg items-center ${isDarkMode ? 'bg-slate-700' : 'bg-gray-200'}`)}>
+                        <Text style={tw(`text-sm font-medium ${isDarkMode ? 'text-slate-400' : 'text-gray-500'}`)}>
+                          Farmer hasn't paid yet
+                        </Text>
+                      </View>
+                    )}
                     <TouchableOpacity style={tw('flex-1 bg-red-500 py-2 rounded-lg items-center')}
                       onPress={() => handleReject(item)}>
                       <Text style={tw('text-white font-medium text-sm')}>Reject</Text>
@@ -187,11 +207,9 @@ const AdminPendingCrops = ({ navigation }) => {
                 </View>
               </View>
             </View>
-          )}
+            );
+            }}
         />
-      ) : (
-        <NeedsTransporterView onOpenBids={openBids} isDarkMode={isDarkMode} />
-      )}
 
       <Modal visible={!!previewImage} transparent animationType="fade"
         onRequestClose={() => setPreviewImage(null)}>

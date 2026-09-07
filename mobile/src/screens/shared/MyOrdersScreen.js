@@ -1,5 +1,8 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
-import { View, Text, TouchableOpacity, Alert, ActivityIndicator, FlatList, TextInput } from 'react-native';
+import { View, Text, TouchableOpacity, Alert, ActivityIndicator, FlatList, TextInput, Platform } from 'react-native';
+import * as Print from 'expo-print';
+import * as Sharing from 'expo-sharing';
+
 import { useFocusEffect } from '@react-navigation/native';
 import { tw } from '../../utils/tw';
 import { useTheme } from '../../context/ThemeContext';
@@ -85,6 +88,38 @@ const MyOrdersScreen = ({ navigation, route }) => {
     }, null, 'Confirm Received', 'Cancel');
   };
 
+  const handleFarmerReceipt = (order) => {
+    confirmAlert('Confirm Receipt', 'Confirm this order and make the payment receipt available to the buyer?', async () => {
+      try {
+        await orderAPI.confirmFarmerReceipt(order._id);
+        alert('Success', 'Receipt confirmed. The buyer can now view and download it.');
+        loadOrders();
+      } catch (err) {
+        alert('Error', err.response?.data?.message || 'Failed to confirm receipt');
+      }
+    }, null, 'Confirm Receipt', 'Cancel');
+  };
+
+  const handleDownloadReceipt = async (order) => {
+    const buyer = order.buyer || {};
+    const farmer = order.farmer || {};
+    const crop = order.crop || {};
+    const html = `<html><body style="font-family:Arial;padding:24px"><h1>AgriLink Rwanda Receipt</h1><p><b>Order reference:</b> ${order.transactionRef || ''}</p><p><b>Product:</b> ${crop.name || 'Order'}</p><p><b>Quantity:</b> ${order.quantity || ''} ${order.quantityUnit || ''}</p><p><b>Amount:</b> ${formatCurrency(order.amount)}</p><p><b>Buyer:</b> ${buyer.name || ''}</p><p><b>Farmer:</b> ${farmer.name || ''}</p><p><b>Payment method:</b> ${order.paymentMethod || ''}</p><p><b>Payment number/code:</b> ${order.payerPhone || ''}</p><p><b>Confirmed:</b> ${order.receiptConfirmedAt ? new Date(order.receiptConfirmedAt).toLocaleString() : ''}</p></body></html>`;
+    try {
+      const result = await Print.printToFileAsync({ html });
+      if (Platform.OS !== 'web' && await Sharing.isAvailableAsync()) {
+        await Sharing.shareAsync(result.uri, { mimeType: 'application/pdf', dialogTitle: 'Download receipt' });
+      } else if (Platform.OS === 'web') {
+        const link = document.createElement('a');
+        link.href = result.uri;
+        link.download = `${order.transactionRef || 'agrilink-receipt'}.pdf`;
+        link.click();
+      }
+    } catch (err) {
+      alert('Error', 'Unable to download the receipt');
+    }
+  };
+
   const networks = [
     { value: 'mtn', label: 'MTN', icon: '📱' },
     { value: 'airtel', label: 'Airtel', icon: '📲' },
@@ -92,6 +127,7 @@ const MyOrdersScreen = ({ navigation, route }) => {
 
   const isBuyer = user?.role === 'buyer';
   const canConfirm = (item) => isBuyer && (item.status === 'locked' || item.status === 'in_transit');
+  const canConfirmFarmerReceipt = (item) => !isBuyer && !item.receiptConfirmedAt && (item.status === 'locked' || item.status === 'in_transit');
   const needsPayment = (item) => isBuyer && item.status === 'pending_deposit' && item.type === 'direct';
 
   const handleMobilePay = async (order) => {
@@ -180,8 +216,9 @@ const MyOrdersScreen = ({ navigation, route }) => {
                 <TouchableOpacity key={n.value}
                   style={tw(`flex-1 py-2 rounded-lg items-center ${payNetwork === n.value ? 'bg-green-800' : isDarkMode ? 'bg-slate-600' : 'bg-green-100'}`)}
                   onPress={() => setPayNetwork(n.value)}>
+                  <Text style={{ fontSize: 18, color: '#000000', marginBottom: 2 }}>{n.icon}</Text>
                   <Text style={tw(`text-xs font-medium ${payNetwork === n.value ? 'text-white' : isDarkMode ? 'text-slate-300' : 'text-green-800'}`)}>
-                    {n.icon} {n.label}
+                    {n.label}
                   </Text>
                 </TouchableOpacity>
               ))}
@@ -225,6 +262,28 @@ const MyOrdersScreen = ({ navigation, route }) => {
         </TouchableOpacity>
       )}
 
+      {canConfirmFarmerReceipt(item) && (
+        <TouchableOpacity style={tw('mt-3 bg-green-800 py-3 rounded-xl items-center')}
+          onPress={() => handleFarmerReceipt(item)}>
+          <Text style={tw('text-white font-medium')}>Confirm Receipt for Buyer</Text>
+        </TouchableOpacity>
+      )}
+
+      {!isBuyer && item.receiptConfirmedAt && (
+        <Text style={tw('mt-2 text-green-600 text-sm font-medium')}>✓ Receipt confirmed and sent to buyer.</Text>
+      )}
+
+      {isBuyer && item.receiptConfirmedAt && (
+        <TouchableOpacity style={tw('mt-3 bg-green-800 py-3 rounded-xl items-center')}
+          onPress={() => handleDownloadReceipt(item)}>
+          <Text style={tw('text-white font-medium')}>Download Receipt</Text>
+        </TouchableOpacity>
+      )}
+
+      {isBuyer && !item.receiptConfirmedAt && (
+        <Text style={tw(`mt-2 text-xs ${isDarkMode ? 'text-slate-400' : 'text-gray-500'}`)}>Receipt will be available after the farmer confirms it.</Text>
+      )}
+
       {item.status === 'delivered' && (
         <View style={tw('mt-2')}>
           <Text style={tw('text-green-600 text-sm font-medium')}>✓ Receipt confirmed. Awaiting admin release.</Text>
@@ -242,7 +301,11 @@ const MyOrdersScreen = ({ navigation, route }) => {
   return (
     <View style={tw(`flex-1 ${isDarkMode ? 'bg-slate-900' : 'bg-white'}`)}>
       <View style={tw(`p-6 pt-12 ${isDarkMode ? 'bg-slate-800' : 'bg-green-800'}`)}>
-        <Text style={tw('text-white text-2xl font-bold')}>
+        <TouchableOpacity style={tw('self-start px-4 py-2 rounded-full bg-green-600')}
+          onPress={() => navigation.goBack()}>
+          <Text style={tw('text-white font-medium')}>← Back</Text>
+        </TouchableOpacity>
+        <Text style={tw('text-white text-2xl font-bold mt-4')}>
           {isBuyer ? 'My Orders' : 'Orders Received'}
         </Text>
         <Text style={tw(`text-sm mt-1 ${isDarkMode ? 'text-slate-400' : 'text-green-100'}`)}>

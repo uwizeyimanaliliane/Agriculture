@@ -81,7 +81,11 @@ const MyAuctions = ({ navigation }) => {
   return (
     <View style={tw(`flex-1 ${isDarkMode ? 'bg-slate-900' : 'bg-white'}`)}>
       <View style={tw(`p-6 pt-12 ${isDarkMode ? 'bg-slate-800' : 'bg-green-800'}`)}>
-        <Text style={tw('text-white text-2xl font-bold')}>My Listings</Text>
+        <TouchableOpacity style={tw('self-start px-4 py-2 rounded-full bg-green-600')}
+          onPress={() => navigation.goBack()}>
+          <Text style={tw('text-white font-medium')}>← Back</Text>
+        </TouchableOpacity>
+        <Text style={tw('text-white text-2xl font-bold mt-4')}>My Listings</Text>
         <Text style={tw('text-green-100 text-sm mt-1')}>{auctions.length} listings</Text>
       </View>
 

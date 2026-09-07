@@ -9,10 +9,11 @@ import { tw } from '../../utils/tw';
 import { useAuth } from '../../context/AuthContext';
 import { useTheme } from '../../context/ThemeContext';
 import { useI18n } from '../../i18n';
+import { navigateToRoot } from '../../navigation/navigationRef';
 
 WebBrowser.maybeCompleteAuthSession();
 
-const DEFAULT_CLIENT_ID = '827251390032-lf1eq7qbb8jhio2s00b6nif03rkgu8qh.apps.googleusercontent.com';
+const DEFAULT_CLIENT_ID = '676811766876-a5obs6vb27ucufmd94pph9rpf27nari4.apps.googleusercontent.com';
 const {
   EXPO_PUBLIC_GOOGLE_CLIENT_ID,
   EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID,
@@ -23,9 +24,7 @@ const WEB_CLIENT_ID = EXPO_PUBLIC_GOOGLE_CLIENT_ID || DEFAULT_CLIENT_ID;
 const ANDROID_CLIENT_ID = EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID || WEB_CLIENT_ID;
 const IOS_CLIENT_ID = EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID || WEB_CLIENT_ID;
 
-const hasGoogleConfig = !!EXPO_PUBLIC_GOOGLE_CLIENT_ID;
-
-const LoginScreen = ({ navigation }) => {
+const LoginScreen = ({ navigation, route }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -39,21 +38,28 @@ const LoginScreen = ({ navigation }) => {
   const languages = [
     { code: 'en', label: 'English' },
     { code: 'fr', label: 'Français' },
-    { code: 'rw', label: 'Kinyarwanda' },
+    { code: 'rw', label: 'Ikinyarwanda' },
   ];
 
-  const [selectedRole, setSelectedRole] = useState('buyer');
+  const [selectedRole, setSelectedRole] = useState(route?.params?.selectedRole || 'buyer');
 
   useEffect(() => {
     return () => { mountedRef.current = false; };
   }, []);
 
-  // Web: no proxy — uses the page URL as redirect (e.g. http://localhost:8081/)
-  // Native: uses Expo proxy (https://auth.expo.io/@YOUR_USERNAME/agrilink-rwanda)
-  const isWeb = Platform.OS === 'web';
-  const useProxy = !isWeb;
+  useEffect(() => {
+    if (route?.params?.selectedRole) setSelectedRole(route.params.selectedRole);
+  }, [route?.params?.selectedRole]);
 
-  const redirectUri = makeRedirectUri({ useProxy, preferLocalhost: true });
+  // Expo Go needs the Expo proxy; web uses the current page URL.
+  const isWeb = Platform.OS === 'web';
+  const useProxy = !isWeb && Constants.appOwnership === 'expo';
+  const hasExpoOwner = !!Constants.expoConfig?.owner;
+  const hasGoogleConfig = !!WEB_CLIENT_ID && (
+    isWeb || useProxy || (Platform.OS === 'android' && !!ANDROID_CLIENT_ID) || (Platform.OS === 'ios' && !!IOS_CLIENT_ID)
+  );
+
+  const redirectUri = makeRedirectUri({ useProxy, scheme: 'agrilink', preferLocalhost: true });
   // helpful log when debugging redirect issues — register this exact URI in Google Cloud Console
   if (typeof console !== 'undefined') console.log('Google redirectUri:', redirectUri);
 
@@ -67,7 +73,21 @@ const LoginScreen = ({ navigation }) => {
   }, { useProxy });
 
   const handleGooglePress = async () => {
-    if (!hasGoogleConfig) return;
+    if (!hasGoogleConfig) {
+      const platform = Platform.OS === 'android' ? 'Android' : 'iOS';
+      Alert.alert(
+        'Google Sign-In Setup Required',
+        `Add EXPO_PUBLIC_GOOGLE_${platform.toUpperCase()}_CLIENT_ID to mobile/.env. Create an OAuth ${platform} client in Google Cloud for package rw.agrilink.app, then restart Expo.`
+      );
+      return;
+    }
+    if (useProxy && !hasExpoOwner) {
+      Alert.alert(
+        'Expo Google Sign-In Setup Required',
+        'This Expo project has no owner, so Google cannot validate its redirect address. Add EXPO_OWNER=your-expo-username to mobile/.env, run npx expo login, and restart Expo.'
+      );
+      return;
+    }
     if (!selectedRole) {
       Alert.alert('Role Required', 'Please choose Farmer or Buyer before continuing with Google sign-in.');
       return;
@@ -91,8 +111,15 @@ const LoginScreen = ({ navigation }) => {
       } else if (result.type === 'error') {
         const err = result.error || {};
         const errMsg = err.message || err.description || err.code || '';
-        const isSetupIssue = /redirect_uri_mismatch|origin_mismatch|access_denied/i.test(JSON.stringify(err));
-        if (isSetupIssue) {
+        const googleError = JSON.stringify(err);
+        const isOrganizationRestricted = /org_internal|organization|restricted to users within/i.test(googleError);
+        const isSetupIssue = /redirect_uri_mismatch|origin_mismatch/i.test(googleError);
+        if (isOrganizationRestricted) {
+          Alert.alert(
+            'Google Sign-In Restricted',
+            'This Google OAuth app is set to Internal. In Google Cloud Console, open Google Auth Platform > Audience, choose External, and add your email as a test user if the app is still in testing.'
+          );
+        } else if (isSetupIssue) {
           const redirectUri = request?.redirectUri ||
             (isWeb ? window.location.origin + '/' : 'https://auth.expo.io/@YOUR_EXPO_USERNAME/agrilink-rwanda');
           const steps = isWeb
@@ -263,13 +290,19 @@ const LoginScreen = ({ navigation }) => {
 
         {!hasGoogleConfig && (
           <Text style={tw(`text-[10px] text-center mb-3 ${isDarkMode ? 'text-slate-500' : 'text-gray-400'}`)}>
-            Set EXPO_PUBLIC_GOOGLE_CLIENT_ID in mobile/.env
+            Configure Google OAuth credentials in mobile/.env
           </Text>
         )}
 
         <TouchableOpacity style={tw('py-3 mt-2 items-center')} onPress={() => navigation.navigate('Register')}>
           <Text style={tw(`text-center font-medium ${isDarkMode ? 'text-green-400' : 'text-green-600'}`)}>
             {t('auth.noAccount')}
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={tw('py-3 mt-1 items-center')} onPress={() => navigateToRoot('BuyerHome')}>
+          <Text style={tw(`text-center font-semibold text-sm ${isDarkMode ? 'text-slate-300' : 'text-gray-600'}`)}>
+            {t('auth.continueAsGuest')}
           </Text>
         </TouchableOpacity>
       </View>

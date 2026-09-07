@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useAuth } from '../context/AuthContext';
 import en from './en';
 import rw from './rw';
 import fr from './fr';
@@ -12,6 +13,7 @@ const I18nContext = createContext();
 export function I18nProvider({ children }) {
   const [locale, setLocale] = useState('en');
   const [loaded, setLoaded] = useState(false);
+  const { user } = useAuth();
 
   useEffect(() => {
     (async () => {
@@ -23,6 +25,12 @@ export function I18nProvider({ children }) {
     })();
   }, []);
 
+  useEffect(() => {
+    if (user?.preferredLanguage && translations[user.preferredLanguage]) {
+      setLocale(user.preferredLanguage);
+    }
+  }, [user?.preferredLanguage]);
+
   const changeLanguage = useCallback(async (lang) => {
     if (!translations[lang]) return;
     setLocale(lang);
@@ -31,14 +39,21 @@ export function I18nProvider({ children }) {
     } catch (_) {}
   }, []);
 
-  const t = (path) => {
+  const lookup = (lang, path) => {
     const keys = path.split('.');
-    let result = translations[locale];
+    let result = translations[lang];
     for (const key of keys) {
       if (result && result[key] !== undefined) result = result[key];
-      else return path;
+      else return undefined;
     }
     return result;
+  };
+
+  const t = (path) => {
+    const local = lookup(locale, path);
+    if (typeof local === 'string') return local;
+    const fallback = lookup('en', path);
+    return typeof fallback === 'string' ? fallback : path;
   };
 
   return (

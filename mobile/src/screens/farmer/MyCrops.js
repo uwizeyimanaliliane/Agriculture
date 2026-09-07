@@ -4,9 +4,10 @@ import { useFocusEffect } from '@react-navigation/native';
 import { tw } from '../../utils/tw';
 import { useTheme } from '../../context/ThemeContext';
 import { useI18n } from '../../i18n';
-import { cropAPI } from '../../services/api';
+import { cropAPI, farmerAPI } from '../../services/api';
 import { formatCurrency, getImageUrl } from '../../utils/formatters';
 import { confirmAlert } from '../../utils/platform';
+import BackButton from '../../components/BackButton';
 
 const CropImage = ({ uri, onPress }) => {
   const [failed, setFailed] = useState(false);
@@ -27,8 +28,23 @@ const MyCrops = ({ navigation }) => {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [previewImage, setPreviewImage] = useState(null);
+  const [eligible, setEligible] = useState(false);
+  const [eligibilityLoading, setEligibilityLoading] = useState(true);
   const { isDarkMode } = useTheme();
   const { t } = useI18n();
+
+  const fetchEligibility = useCallback(async () => {
+    setEligibilityLoading(true);
+    try {
+      const { data } = await farmerAPI.getVerificationStatus();
+      const farmer = data?.farmer;
+      setEligible(!!(farmer && farmer.verificationStatus === 'verified'));
+    } catch (error) {
+      setEligible(false);
+    } finally {
+      setEligibilityLoading(false);
+    }
+  }, []);
 
   const fetchCrops = useCallback(async () => {
     try {
@@ -44,7 +60,8 @@ const MyCrops = ({ navigation }) => {
 
   useFocusEffect(useCallback(() => {
     fetchCrops();
-  }, [fetchCrops]));
+    fetchEligibility();
+  }, [fetchCrops, fetchEligibility]));
 
   const onRefresh = async () => {
     setRefreshing(true);
@@ -64,6 +81,10 @@ const MyCrops = ({ navigation }) => {
 
   const handleEdit = (crop) => {
     navigation.navigate('AddCrop', { crop });
+  };
+
+  const handleAddCrop = async () => {
+    navigation.navigate('AddCropGateway');
   };
 
   const statusBg = (status) => {
@@ -129,9 +150,11 @@ const MyCrops = ({ navigation }) => {
           </View>
         </View>
         <View style={tw('flex-row justify-end mt-3 pt-3 border-t border-gray-100')}>
-          <TouchableOpacity style={tw('px-3 py-2 rounded-lg bg-blue-500 mr-2')} onPress={() => handleEdit(item)}>
-            <Text style={tw('text-white text-sm font-medium')}>{t('farmer.edit')}</Text>
-          </TouchableOpacity>
+          {item.status !== 'available' && (
+            <TouchableOpacity style={tw('px-3 py-2 rounded-lg bg-blue-500 mr-2')} onPress={() => handleEdit(item)}>
+              <Text style={tw('text-white text-sm font-medium')}>{t('farmer.edit')}</Text>
+            </TouchableOpacity>
+          )}
           <TouchableOpacity style={tw('px-3 py-2 rounded-lg bg-red-500')} onPress={() => handleDelete(item._id, item.name)}>
             <Text style={tw('text-white text-sm font-medium')}>{t('farmer.delete')}</Text>
           </TouchableOpacity>
@@ -159,6 +182,7 @@ const MyCrops = ({ navigation }) => {
   return (
     <View style={tw(`flex-1 ${isDarkMode ? 'bg-slate-900' : 'bg-white'}`)}>
       <View style={tw(`p-5 pt-12 ${isDarkMode ? 'bg-slate-800' : 'bg-green-800'}`)}>
+        <BackButton onPress={() => navigation.goBack()} style="mb-3" />
         <Text style={tw('text-white text-xl font-bold')}>{t('farmer.myCrops')}</Text>
         <Text style={tw('text-green-100 text-sm mt-1')}>{crops.length} {t('farmer.cropsListed')}</Text>
       </View>
@@ -172,22 +196,36 @@ const MyCrops = ({ navigation }) => {
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} colors={['#16a34a']} />
         }
         ListEmptyComponent={
-          <View style={tw('items-center pt-16')}>
-            <Text style={tw(`text-lg mb-4 ${isDarkMode ? 'text-slate-400' : 'text-gray-400'}`)}>
+          <View style={tw('items-center pt-16 px-6')}>
+            <Text style={tw(`text-lg mb-4 text-center ${isDarkMode ? 'text-slate-400' : 'text-gray-400'}`)}>
               {t('farmer.noCrops')}
             </Text>
-            <TouchableOpacity style={tw('bg-green-800 px-6 py-3 rounded-xl')}
-              onPress={() => navigation.navigate('AddCrop')}>
-              <Text style={tw('text-white font-semibold')}>{t('farmer.addFirstCrop')}</Text>
-            </TouchableOpacity>
+            {eligible ? (
+              <TouchableOpacity style={tw('bg-green-800 px-6 py-3 rounded-xl')}
+                onPress={handleAddCrop}>
+                <Text style={tw('text-white font-semibold')}>{t('farmer.addFirstCrop')}</Text>
+              </TouchableOpacity>
+            ) : (
+              <>
+                <Text style={tw(`text-sm mb-4 text-center ${isDarkMode ? 'text-slate-400' : 'text-gray-600'}`)}>
+                  You must complete verification and be approved by an admin before adding products.
+                </Text>
+                <TouchableOpacity style={tw('bg-green-800 px-6 py-3 rounded-xl')}
+                  onPress={() => navigation.navigate('Verification')}>
+                  <Text style={tw('text-white font-semibold')}>Complete Verification</Text>
+                </TouchableOpacity>
+              </>
+            )}
           </View>
         }
       />
 
-      <TouchableOpacity style={tw('absolute bottom-6 right-6 w-14 h-14 bg-green-800 rounded-full items-center justify-center shadow-lg')}
-        onPress={() => navigation.navigate('AddCrop')}>
-        <Text style={tw('text-white text-3xl leading-none')}>+</Text>
-      </TouchableOpacity>
+      {eligible && (
+        <TouchableOpacity style={tw('absolute bottom-6 right-6 w-14 h-14 bg-green-800 rounded-full items-center justify-center shadow-lg')}
+          onPress={handleAddCrop}>
+          <Text style={tw('text-white text-3xl leading-none')}>+</Text>
+        </TouchableOpacity>
+      )}
     </View>
   );
 };

@@ -6,6 +6,14 @@ import { useAuth } from './AuthContext';
 const NotificationContext = createContext(null);
 const POLL_INTERVAL = 30000;
 
+const sortNotifications = (items = []) => {
+  return [...items].sort((a, b) => {
+    const aTime = new Date(a.createdAt || 0).getTime();
+    const bTime = new Date(b.createdAt || 0).getTime();
+    return bTime - aTime;
+  });
+};
+
 export const NotificationProvider = ({ children }) => {
   const { isAuthenticated } = useAuth();
   const [notifications, setNotifications] = useState([]);
@@ -17,7 +25,7 @@ export const NotificationProvider = ({ children }) => {
     if (!isAuthenticated) return;
     try {
       const response = await notificationAPI.getAll();
-      setNotifications(response.data.notifications);
+      setNotifications(sortNotifications(response.data.notifications));
       setUnreadCount(response.data.unreadCount);
     } catch (error) {
       console.error('Failed to fetch notifications:', error);
@@ -52,7 +60,7 @@ export const NotificationProvider = ({ children }) => {
     try {
       await notificationAPI.markRead(id);
       setNotifications((prev) =>
-        prev.map((n) => (n._id === id ? { ...n, isRead: true } : n))
+        sortNotifications(prev.map((n) => (n._id === id ? { ...n, isRead: true } : n)))
       );
       setUnreadCount((prev) => Math.max(0, prev - 1));
     } catch (error) {
@@ -63,10 +71,25 @@ export const NotificationProvider = ({ children }) => {
   const markAllAsRead = useCallback(async () => {
     try {
       await notificationAPI.markAllRead();
-      setNotifications((prev) => prev.map((n) => ({ ...n, isRead: true })));
+      setNotifications((prev) => sortNotifications(prev.map((n) => ({ ...n, isRead: true }))));
       setUnreadCount(0);
     } catch (error) {
       console.error('Failed to mark all as read:', error);
+    }
+  }, []);
+
+  const deleteNotification = useCallback(async (id) => {
+    try {
+      await notificationAPI.delete(id);
+      setNotifications((prev) => {
+        const target = prev.find((n) => n._id === id);
+        if (target && !target.isRead) {
+          setUnreadCount((count) => Math.max(0, count - 1));
+        }
+        return sortNotifications(prev.filter((n) => n._id !== id));
+      });
+    } catch (error) {
+      console.error('Failed to delete notification:', error);
     }
   }, []);
 
@@ -78,6 +101,7 @@ export const NotificationProvider = ({ children }) => {
         fetchNotifications,
         markAsRead,
         markAllAsRead,
+        deleteNotification,
       }}
     >
       {children}
